@@ -1,0 +1,36 @@
+[
+    {
+    "file": "game:recipes/grid/tool/sling.json",
+    "op": "replace",
+    "durability": 200
+    },
+    {
+        "file": "game:recipes/grid/tool/sling.json",
+        "op": "remove",
+        "requiresTrait": "improviser"
+    },
+    {
+        "file": "game:recipes/grid/tool/sling.json",
+        "op": "add",
+        "path": "/1/enabled",
+        "value": false
+    },
+    {
+        "file": "game:recipes/grid/tool/sling.json",
+        "op": "add",
+        "path": "/2/enabled",
+        "value": false
+    },
+    {
+        "file": "shape:item/tool/sling.json",
+        "op": "replace",
+        "path": "/shape",
+        "value": {
+        "base": "arrowsnslings:item/slings/base/folded",
+            "alternates": [
+                { "base": "arrowsnslings:item/slings/base/sling-charge2" },
+                { "base": "arrowsnslings:item/slings/base/sling-charge3" }
+      ]
+    }
+    }
+]
