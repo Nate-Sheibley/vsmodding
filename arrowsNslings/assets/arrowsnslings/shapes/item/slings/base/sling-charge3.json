@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"gray": "block/cloth/fur/gray",
-		"reedrope": "block/cloth/ropedcloth"
+		"gray": "game:block/cloth/fur/gray",
+		"reedrope": "game:lock/cloth/ropedcloth"
 	},
 	"elements": [
 		{

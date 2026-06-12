@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"reedrope": "block/cloth/ropedcloth",
-		"aged-westeast": "block/reed/basket/aged-westeast"
+		"reedrope": "game:block/cloth/ropedcloth",
+		"aged-westeast": "game:block/reed/basket/aged-westeast"
 	},
 	"elements": [
 		{

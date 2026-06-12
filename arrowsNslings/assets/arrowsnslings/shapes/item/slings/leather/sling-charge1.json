@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"normal": "block/cloth/leather/normal",
-		"mordant": "block/cloth/linen/mordant"
+		"normal": "game:block/cloth/leather/normal",
+		"mordant": "game:block/cloth/linen/mordant"
 	},
 	"elements": [
 		{

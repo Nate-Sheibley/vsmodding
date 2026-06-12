@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"chromium": "block/leather/chromium",
-		"mordant": "block/cloth/linen/mordant"
+		"chromium": "game:block/leather/chromium",
+		"mordant": "game:block/cloth/linen/mordant"
 	},
 	"elements": [
 		{

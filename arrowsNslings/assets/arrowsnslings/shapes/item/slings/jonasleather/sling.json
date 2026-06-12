@@ -8,9 +8,9 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"normal": "block/cloth/leather/normal",
-		"mordant": "block/cloth/linen/mordant",
-		"cupronickel": "block/metal/ingot/cupronickel"
+		"normal": "game:block/cloth/leather/normal",
+		"mordant": "game:block/cloth/linen/mordant",
+		"cupronickel": "game:block/metal/ingot/cupronickel"
 	},
 	"elements": [
 		{

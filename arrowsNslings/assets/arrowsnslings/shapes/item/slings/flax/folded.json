@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"gray": "block/cloth/fur/gray",
-		"mordant": "block/cloth/linen/mordant"
+		"gray": "game:block/cloth/fur/gray",
+		"mordant": "game:block/cloth/linen/mordant"
 	},
 	"elements": [
 		{
