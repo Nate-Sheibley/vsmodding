@@ -3,6 +3,7 @@
 	"class": "ItemSling",
 	"tags": ["weapon", "weapon-ranged"],
 	"maxstacksize": 1,
+    "tool": "sling",
     "variantgroups": [
     { "code": "type", "states": ["reed", "flax", "leather", "jonasleather", "hardleather", "jonashardleather"] }
   ],
@@ -21,6 +22,50 @@
 			{ "base": "item/tool/sling/sling-charge3" }
 		]
 	},
+  "shapebytype": {
+    "sling-reed": {
+      "base": "arrowsNslings:item/slings/reed/folded",
+      "alternates": [
+        { "base": "arrowsNslings:item/slings/reed/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/reed/sling-charge3" }
+      ]
+    },
+    "sling-flax": {
+      "base": "arrowsNslings:item/slings/flax/folded",
+      "alternates": [
+        { "base": "arrowsNslings:item/slings/flax/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/flax/sling-charge3" }
+      ]
+    },
+    "sling-leather": {
+      "base": "arrowsNslings:item/slings/leather/folded",
+      "alternates": [
+        { "base": "arrowsNslings:item/slings/leather/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/leather/sling-charge3" }
+      ]
+    },
+	"sling-jonasleather": {
+      "base": "arrowsNslings:item/slings/jonasleather/folded",
+      "alternates": [
+        { "base": "arrowsNslings:item/slings/jonasleather/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/jonasleather/sling-charge3" }
+      ]
+    },
+	"sling-hardleather": {
+      "base": "arrowsNslings:item/slings/hardleather/folded",
+      "alternates": [
+        { "base": "arrowsNslings:item/slings/hardleather/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/hardleather/sling-charge3" }
+      ]
+    },
+    "sling-jonashardleather": {
+      "base": "arrowsNslings:item/slings/hardleather/folded",
+      "alternates": [
+        { "base": "arrowsNslings:item/slings/hardleather/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/hardleather/sling-charge3" }
+      ]
+    }
+  },
 	"tool": "sling",
 	"creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"] },
 	"attributes": {
