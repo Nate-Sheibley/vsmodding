@@ -20,5 +20,17 @@
         "op": "add",
         "path": "/2/enabled",
         "value": false
+    },
+    {
+        "file": "game:item/tool/sling.json",
+        "op": "replace",
+        "path": "/shape",
+        "value": {
+        "base": "arrowsNslings:item/slings/base/folded",
+            "alternates": [
+                { "base": "arrowsNslings:item/slings/base/sling-charge2" },
+                { "base": "arrowsNslings:item/slings/base/sling-charge3" }
+      ]
+    }
     }
 ]
