@@ -118,12 +118,12 @@
 											"to": [ 0.0, 0.7, 2.0 ],
 											"rotationOrigin": [ 0.0, 0.0, 1.0 ],
 											"faces": {
-												"north": { "texture": "#gray", "uv": [ 4.5, 5.0, 5.5, 6.0 ], "autoUv": false },
-												"east": { "texture": "#gray", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
-												"south": { "texture": "#gray", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
-												"west": { "texture": "#gray", "uv": [ 9.0, 12.5, 11.0, 13.5 ] },
-												"up": { "texture": "#gray", "uv": [ 12.5, 11.5, 13.5, 13.5 ] },
-												"down": { "texture": "#gray", "uv": [ 12.5, 11.5, 13.5, 13.5 ] }
+												"north": { "texture": "#aged-westeast", "uv": [ 1.0, 1.5, 2.0, 2.5 ] },
+												"east": { "texture": "#aged-westeast", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
+												"south": { "texture": "#aged-westeast", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
+												"west": { "texture": "#aged-westeast", "uv": [ 8.0, 13.5, 10.0, 14.5 ] },
+												"up": { "texture": "#aged-westeast", "uv": [ 12.5, 12.5, 13.5, 14.5 ] },
+												"down": { "texture": "#aged-westeast", "uv": [ 14.5, 13.5, 15.5, 15.5 ] }
 											}
 										}
 									]
@@ -133,14 +133,13 @@
 									"from": [ -1.0, 0.0, 1.6 ],
 									"to": [ 0.0, 0.4, 2.0 ],
 									"rotationOrigin": [ 4.0, 0.2, 1.8 ],
-											"faces": {
-												"north": { "texture": "#aged-westeast", "uv": [ 1.0, 1.5, 2.0, 2.5 ] },
-												"east": { "texture": "#aged-westeast", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
-												"south": { "texture": "#aged-westeast", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
-												"west": { "texture": "#aged-westeast", "uv": [ 8.0, 13.5, 10.0, 14.5 ] },
-												"up": { "texture": "#aged-westeast", "uv": [ 12.5, 12.5, 13.5, 14.5 ] },
-												"down": { "texture": "#aged-westeast", "uv": [ 14.5, 13.5, 15.5, 15.5 ] }
-											}
+									"faces": {
+										"north": { "texture": "#reedrope", "uv": [ 9.0, 7.0, 10.0, 7.5 ] },
+										"east": { "texture": "#reedrope", "uv": [ 10.5, 0.5, 11.0, 1.0 ], "enabled": false },
+										"south": { "texture": "#reedrope", "uv": [ 1.5, 9.5, 2.5, 10.0 ] },
+										"west": { "texture": "#reedrope", "uv": [ 1.5, 2.5, 2.0, 3.0 ], "enabled": false },
+										"up": { "texture": "#reedrope", "uv": [ 4.5, 4.5, 5.5, 5.0 ] },
+										"down": { "texture": "#reedrope", "uv": [ 4.5, 11.5, 5.5, 12.0 ] }
 								}
 							]
 						}

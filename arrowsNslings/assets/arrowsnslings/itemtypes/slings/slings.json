@@ -59,10 +59,10 @@
       ]
     },
     "sling-jonashardleather": {
-      "base": "arrowsNslings:item/slings/hardleather/folded",
+      "base": "arrowsNslings:item/slings/jonashardleather/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/hardleather/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/hardleather/sling-charge3" }
+        { "base": "arrowsNslings:item/slings/jonashardleather/sling-charge2" },
+        { "base": "arrowsNslings:item/slings/jonashardleather/sling-charge3" }
       ]
     }
   },

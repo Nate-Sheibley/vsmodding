@@ -8,7 +8,7 @@
     {
         "file": "game:recipes/grid/tool/sling.json",
         "op": "remove",
-        "path":"/requiresTrait"
+        "path":"/0/requiresTrait"
     },
     {
         "file": "game:recipes/grid/tool/sling.json",
