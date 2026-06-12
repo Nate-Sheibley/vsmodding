@@ -1,6 +1,6 @@
 [
     {
-    "file": "game:item/tool/sling.json",
+    "file": "game:itemtypes/tool/sling.json",
     "op": "replace",
     "path": "/durability",
     "value": 200
@@ -23,7 +23,7 @@
         "value": false
     },
     {
-        "file": "game:shapes/item/tool/sling.json",
+        "file": "game:itemtypes/tool/sling.json",
         "op": "replace",
         "path": "/shape",
         "value": {
