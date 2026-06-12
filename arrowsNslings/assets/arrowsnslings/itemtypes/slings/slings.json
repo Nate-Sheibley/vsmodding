@@ -24,45 +24,45 @@
 	},
   "shapebytype": {
     "sling-reed": {
-      "base": "arrowsNslings:item/slings/reed/folded",
+      "base": "arrowsnslings:item/slings/reed/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/reed/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/reed/sling-charge3" }
+        { "base": "arrowsnslings:item/slings/reed/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/reed/sling-charge3" }
       ]
     },
     "sling-flax": {
-      "base": "arrowsNslings:item/slings/flax/folded",
+      "base": "arrowsnslings:item/slings/flax/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/flax/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/flax/sling-charge3" }
+        { "base": "arrowsnslings:item/slings/flax/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/flax/sling-charge3" }
       ]
     },
     "sling-leather": {
-      "base": "arrowsNslings:item/slings/leather/folded",
+      "base": "arrowsnslings:item/slings/leather/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/leather/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/leather/sling-charge3" }
+        { "base": "arrowsnslings:item/slings/leather/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/leather/sling-charge3" }
       ]
     },
 	"sling-jonasleather": {
-      "base": "arrowsNslings:item/slings/jonasleather/folded",
+      "base": "arrowsnslings:item/slings/jonasleather/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/jonasleather/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/jonasleather/sling-charge3" }
+        { "base": "arrowsnslings:item/slings/jonasleather/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/jonasleather/sling-charge3" }
       ]
     },
 	"sling-hardleather": {
-      "base": "arrowsNslings:item/slings/hardleather/folded",
+      "base": "arrowsnslings:item/slings/hardleather/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/hardleather/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/hardleather/sling-charge3" }
+        { "base": "arrowsnslings:item/slings/hardleather/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/hardleather/sling-charge3" }
       ]
     },
     "sling-jonashardleather": {
-      "base": "arrowsNslings:item/slings/jonashardleather/folded",
+      "base": "arrowsnslings:item/slings/jonashardleather/folded",
       "alternates": [
-        { "base": "arrowsNslings:item/slings/jonashardleather/sling-charge2" },
-        { "base": "arrowsNslings:item/slings/jonashardleather/sling-charge3" }
+        { "base": "arrowsnslings:item/slings/jonashardleather/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/jonashardleather/sling-charge3" }
       ]
     }
   },
@@ -156,4 +156,5 @@
             "scale": 1.25
         }
         }
+}
 }
