@@ -1,0 +1,11 @@
+{
+  "type": "content",
+  "modid": "arrowsNslings",
+  "name": "'Arrows and Slings'",
+  "authors": ["Dyrosis"],
+  "description": "Adds progressive sling types, and rebalances arrows",
+  "version": "0.1.0",
+  "Side": "Universal",
+  "RequiredOnClient": true,
+  "RequiredOnServer": true
+}

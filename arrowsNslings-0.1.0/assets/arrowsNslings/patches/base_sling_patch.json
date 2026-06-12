@@ -1,0 +1,24 @@
+[
+    {
+    "file": "game:recipes/grid/tool/sling.json",
+    "op": "replace",
+    "durability": 200
+    },
+    {
+        "file": "game:recipes/grid/tool/sling.json",
+        "op": "remove",
+        "requiresTrait": "improviser"
+    },
+    {
+        "file": "game:recipes/grid/tool/sling.json",
+        "op": "add",
+        "path": "/1/enabled",
+        "value": false
+    },
+    {
+        "file": "game:recipes/grid/tool/sling.json",
+        "op": "add",
+        "path": "/2/enabled",
+        "value": false
+    }
+]
