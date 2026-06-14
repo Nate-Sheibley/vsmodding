@@ -7,5 +7,9 @@
   "version": "0.9.0",
   "Side": "Universal",
   "RequiredOnClient": true,
-  "RequiredOnServer": true
+  "RequiredOnServer": true,
+  "dependencies": {
+    "game": ""
+  }
+
 }
