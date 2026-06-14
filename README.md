@@ -9,8 +9,10 @@ A couple vintage story mods
 ## Spears and Javlins
 Have not started
  - remove or severely reduce spear throw distance
+ - buff spear durability
  - add javlins that can be thrown and stack
- - add atlatl/spear thrower
+ - add atlatl for javlins
+    -atlatl is craftable by all. MUST be worse than arrowsnslings buffed varients in some way.
 ## Braizers
 Have not started
  - Make a braizer that consumes fuel at ~1/4 normal fuel use
