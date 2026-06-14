@@ -76,26 +76,26 @@
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/damageByType/*-steel", 
-	"value": 6
+	"value": 5
   },
 //   break chance on impact
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-crude", 
-	"value": 0.5
+	"value": 0.25
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-flint", 
-	"value": 0.4
+	"value": 0.25
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-obsidian", 
-	"value": 0.4
+	"value": 0.25
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
@@ -107,7 +107,7 @@
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-bone",
-	"value": 0.3
+	"value": 0.25
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
@@ -131,19 +131,19 @@
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-gold", 
-	"value": 0.5
+	"value": 0.2
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-silver", 
-	"value": 0.5
+	"value": 0.2
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-iron", 
-	"value": 0.05
+	"value": 0.1
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
@@ -155,7 +155,7 @@
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/breakChanceOnImpactByType/*-steel", 
-	"value": 0.01
+	"value": 0.05
   }
 ]
 

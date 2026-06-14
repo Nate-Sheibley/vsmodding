@@ -3,17 +3,9 @@ A couple vintage story mods
 
 # TODO
 ## Slings and arrows
-update arrow break chances
-
-Add butchering compatibility
-
- - horn/ivory bow varient 
-
- - adjust butchering bone arrows
-
-Fix up this mod page
-
-add craftable lead and clay sling projectiles
+Add handbook pages...
+Add butchering horn/ivory bow varient 
+Add (malefactor only) craftable lead and clay sling projectiles
 ## Spears and Javlins
 Have not started
  - remove or severely reduce spear throw distance

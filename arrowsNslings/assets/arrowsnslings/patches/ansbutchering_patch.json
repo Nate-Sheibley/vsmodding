@@ -1,0 +1,16 @@
+  [
+  {
+	"file": "butchering:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-bone",
+	"value": 0.5,
+    "dependsOn": [ { "modid": "butchering" }]
+  },
+  {
+	"file": "butchering:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-bone",
+	"value": 0.2,
+    "dependsOn": [ { "modid": "butchering" }]
+  }
+]
