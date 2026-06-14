@@ -3,7 +3,6 @@ A couple vintage story mods
 
 # TODO
 ## Slings and arrows
- - Add handbook pages...
  - Add Add horn/ivory bow varients, and change hunter/bow progression accordingly 
  - Add (malefactor only) craftable lead and clay sling projectiles
 ## Spears and Javlins
