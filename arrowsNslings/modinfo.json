@@ -4,12 +4,9 @@
   "name": "'Arrows and Slings'",
   "authors": ["Dyrosis"],
   "description": "Adds progressive sling types, and rebalances arrows",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "Side": "Universal",
   "RequiredOnClient": true,
-  "RequiredOnServer": true,
-  "dependencies": {
-    "game": ""
-  }
+  "RequiredOnServer": true
 
 }
