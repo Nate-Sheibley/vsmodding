@@ -1,8 +1,8 @@
 {
-    "item-arrowsnslings-sling-reed": "Reed Sling",
-    "item-arrowsnslings-sling-flax": "Flax Sling",
-    "item-arrowsnslings-sling-leather": "Leather Sling",
-    "item-arrowsnslings-sling-jonasleather": "Advanced Leather Sling",
-    "item-arrowsnslings-sling-hardleather": "Sturdy Sling",
-    "item-arrowsnslings-sling-jonashardleather": "Advanced Sturdy Sling"
+    "arrowsnslings:item-sling-reed": "Reed Sling",
+    "arrowsnslings:item-sling-flax": "Flax Sling",
+    "arrowsnslings:item-sling-leather": "Leather Sling",
+    "arrowsnslings:item-sling-jonasleather": "Advanced Leather Sling",
+    "arrowsnslings:item-sling-hardleather": "Sturdy Sling",
+    "arrowsnslings:item-sling-jonashardleather": "Advanced Sturdy Sling"
 }
