@@ -15,13 +15,6 @@
 	"sling-hardleather": 700,
 	"sling-jonashardleather": 850
     },
-	"shape": {
-		"base": "item/tool/sling/folded",
-		"alternates": [
-			{ "base": "item/tool/sling/sling-charge2" },
-			{ "base": "item/tool/sling/sling-charge3" }
-		]
-	},
   "shapebytype": {
     "sling-reed": {
       "base": "arrowsnslings:item/slings/reed/folded",

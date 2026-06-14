@@ -8,9 +8,9 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"normal": "game:block/cloth/leather/normal",
+		"leather": "game:block/cloth/leather/normal",
 		"mordant": "game:block/cloth/linen/mordant",
-		"cupronickel": "game:block/metal/ingot/cupronickel"
+		"cupronickel": "game:block/machine/statictranslocator/rustyglow"
 	},
 	"elements": [
 		{
@@ -119,12 +119,12 @@
 											"to": [ 0.0, 0.7, 2.0 ],
 											"rotationOrigin": [ 0.0, 0.0, 1.0 ],
 											"faces": {
-												"north": { "texture": "#normal", "uv": [ 4.5, 5.0, 5.5, 6.0 ], "autoUv": false },
-												"east": { "texture": "#normal", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
-												"south": { "texture": "#normal", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
-												"west": { "texture": "#normal", "uv": [ 9.0, 12.5, 11.0, 13.5 ] },
-												"up": { "texture": "#normal", "uv": [ 12.5, 11.5, 13.5, 13.5 ] },
-												"down": { "texture": "#normal", "uv": [ 12.5, 11.5, 13.5, 13.5 ] }
+												"north": { "texture": "#leather", "uv": [ 4.5, 5.0, 5.5, 6.0 ], "autoUv": false },
+												"east": { "texture": "#leather", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
+												"south": { "texture": "#leather", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
+												"west": { "texture": "#leather", "uv": [ 9.0, 12.5, 11.0, 13.5 ] },
+												"up": { "texture": "#leather", "uv": [ 12.5, 11.5, 13.5, 13.5 ] },
+												"down": { "texture": "#leather", "uv": [ 12.5, 11.5, 13.5, 13.5 ] }
 											}
 										}
 									]

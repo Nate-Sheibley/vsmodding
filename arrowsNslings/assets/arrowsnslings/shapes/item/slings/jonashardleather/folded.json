@@ -10,7 +10,7 @@
 	"textures": {
 		"chromium": "game:block/leather/chromium",
 		"mordant": "game:block/cloth/linen/mordant",
-		"cupronickel": "game:block/metal/ingot/cupronickel"
+		"cupronickel": "game:block/machine/statictranslocator/rustyglow"
 	},
 	"elements": [
 		{

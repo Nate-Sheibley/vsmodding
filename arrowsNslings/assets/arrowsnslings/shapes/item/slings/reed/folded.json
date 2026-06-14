@@ -141,6 +141,7 @@
 										"up": { "texture": "#reedrope", "uv": [ 4.5, 4.5, 5.5, 5.0 ] },
 										"down": { "texture": "#reedrope", "uv": [ 4.5, 11.5, 5.5, 12.0 ] }
 								}
+								}
 							]
 						}
 					]
