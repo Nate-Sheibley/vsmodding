@@ -2,7 +2,7 @@
     {
         "ingredientPattern": "S,P",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-leather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-normal-*", "quantity": 1 }
         },
         "width": 1,
@@ -10,12 +10,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.1,
-        "output": { "type": "item", "code": "slings:sling-leather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 }
     },    
     {
         "ingredientPattern": "S,R",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-leather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 1 }
         },
         "width": 1,
@@ -23,12 +23,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.03,
-        "output": { "type": "item", "code": "slings:sling-leather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 }
     },
     {
         "ingredientPattern": "S,P",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-jonasleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-normal-*", "quantity": 1 }
         },
         "width": 1,
@@ -36,12 +36,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.1,
-        "output": { "type": "item", "code": "slings:sling-jonasleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 }
     },    
     {
         "ingredientPattern": "S,R",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-jonasleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 1 }
         },
         "width": 1,
@@ -49,12 +49,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.03,
-        "output": { "type": "item", "code": "slings:sling-jonasleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 }
     },
     {
         "ingredientPattern": "S,P",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-hardleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-sturdy-*", "quantity": 1 }
         },
         "width": 1,
@@ -62,12 +62,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.1,
-        "output": { "type": "item", "code": "slings:sling-hardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 }
     },    
     {
         "ingredientPattern": "S,R",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-hardleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 1 }
         },
         "width": 1,
@@ -75,12 +75,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.03,
-        "output": { "type": "item", "code": "slings:sling-hardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 }
     },
     {
         "ingredientPattern": "S,P",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:gear-temporal", "quantity": 1 }
         },
         "width": 1,
@@ -88,12 +88,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.25,
-        "output": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 }
     },
     {
         "ingredientPattern": "S,P",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-sturdy-*", "quantity": 1 }
         },
         "width": 1,
@@ -101,12 +101,12 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.1,
-        "output": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 }
     },    
     {
         "ingredientPattern": "S,R",
         "ingredients": {
-            "S": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 },
+            "S": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 2 }
         },
         "width": 1,
@@ -114,6 +114,6 @@
         "shapeless": false,
         "copyAttributesFrom": "S",
 		"repairRatio": 0.03,
-        "output": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 }
     }
 ]

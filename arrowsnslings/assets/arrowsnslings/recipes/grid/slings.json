@@ -9,7 +9,7 @@
             "width": 1,
             "height": 2,
             "shapeless": false,
-            "output": { "type": "item", "code": "slings:sling-reed", "quantity": 1 }
+            "output": { "type": "item", "code": "arrowsnslings:sling-reed", "quantity": 1 }
     },
     {
         "ingredientPattern": "R,P",
@@ -21,7 +21,7 @@
         "width": 1,
         "height": 2,
         "shapeless": false,
-        "output": { "type": "item", "code": "slings:sling-flax", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-flax", "quantity": 1 }
     },
     {
         "ingredientPattern": "R,P",
@@ -32,10 +32,10 @@
         "width": 1,
         "height": 2,
         "shapeless": false,
-        "output": { "type": "item", "code": "slings:sling-leather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 }
     },
     {
-        "ingredientPattern": "R_,PJ",
+        "ingredientPattern": "R ,PJ",
         "requiresTrait": "improviser",
         "ingredients": {
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 8},
@@ -45,7 +45,7 @@
         "width": 2,
         "height": 2,
         "shapeless": false,
-        "output": { "type": "item", "code": "slings:sling-jonasleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 }
     },
     {
         "ingredientPattern": "R,P",
@@ -56,7 +56,7 @@
         "width": 1,
         "height": 2,
         "shapeless": false,
-        "output": { "type": "item", "code": "slings:sling-hardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 }
     },
     {
         "ingredientPattern": "RA,PJ",
@@ -70,6 +70,6 @@
         "width": 2,
         "height": 2,
         "shapeless": false,
-        "output": { "type": "item", "code": "slings:sling-jonashardleather", "quantity": 1 }
+        "output": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 }
     }
 ]
