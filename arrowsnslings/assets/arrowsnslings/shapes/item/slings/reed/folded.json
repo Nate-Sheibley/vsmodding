@@ -8,8 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"reedrope": "game:block/cloth/ropedcloth",
-		"aged-westeast": "game:block/reed/basket/aged-westeast"
+		"sling": "game:block/plant/bamboo/bamboowoven",
+		"reedrope": "game:block/cloth/ropedcloth"
 	},
 	"elements": [
 		{
@@ -32,12 +32,12 @@
 					"to": [ 0.2, 0.5, 0.6 ],
 					"rotationOrigin": [ 0.0, 0.2, 0.0 ],
 					"faces": {
-						"north": { "texture": "#aged-westeast", "uv": [ 12.5, 6.5, 13.0, 7.0 ] },
-						"east": { "texture": "#aged-westeast", "uv": [ 10.0, 0.5, 11.0, 1.0 ] },
-						"south": { "texture": "#aged-westeast", "uv": [ 15.0, 1.0, 15.5, 1.5 ] },
-						"west": { "texture": "#aged-westeast", "uv": [ 10.5, 10.0, 11.5, 10.5 ] },
-						"up": { "texture": "#aged-westeast", "uv": [ 7.5, 3.0, 8.0, 4.0 ] },
-						"down": { "texture": "#aged-westeast", "uv": [ 10.5, 12.0, 11.0, 13.0 ] }
+						"north": { "texture": "#sling", "uv": [ 12.5, 6.5, 13.0, 7.0 ] },
+						"east": { "texture": "#sling", "uv": [ 10.0, 0.5, 11.0, 1.0 ] },
+						"south": { "texture": "#sling", "uv": [ 15.0, 1.0, 15.5, 1.5 ] },
+						"west": { "texture": "#sling", "uv": [ 10.5, 10.0, 11.5, 10.5 ] },
+						"up": { "texture": "#sling", "uv": [ 7.5, 3.0, 8.0, 4.0 ] },
+						"down": { "texture": "#sling", "uv": [ 10.5, 12.0, 11.0, 13.0 ] }
 					},
 					"children": [
 						{
@@ -118,12 +118,12 @@
 											"to": [ 0.0, 0.7, 2.0 ],
 											"rotationOrigin": [ 0.0, 0.0, 1.0 ],
 											"faces": {
-												"north": { "texture": "#aged-westeast", "uv": [ 1.0, 1.5, 2.0, 2.5 ] },
-												"east": { "texture": "#aged-westeast", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
-												"south": { "texture": "#aged-westeast", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
-												"west": { "texture": "#aged-westeast", "uv": [ 8.0, 13.5, 10.0, 14.5 ] },
-												"up": { "texture": "#aged-westeast", "uv": [ 12.5, 12.5, 13.5, 14.5 ] },
-												"down": { "texture": "#aged-westeast", "uv": [ 14.5, 13.5, 15.5, 15.5 ] }
+												"north": { "texture": "#sling", "uv": [ 1.0, 1.5, 2.0, 2.5 ] },
+												"east": { "texture": "#sling", "uv": [ 6.0, 7.5, 8.0, 8.5 ] },
+												"south": { "texture": "#sling", "uv": [ 3.5, 5.0, 4.5, 6.0 ] },
+												"west": { "texture": "#sling", "uv": [ 8.0, 13.5, 10.0, 14.5 ] },
+												"up": { "texture": "#sling", "uv": [ 12.5, 12.5, 13.5, 14.5 ] },
+												"down": { "texture": "#sling", "uv": [ 14.5, 13.5, 15.5, 15.5 ] }
 											}
 										}
 									]
