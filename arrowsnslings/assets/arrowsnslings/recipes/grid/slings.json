@@ -35,12 +35,13 @@
         "output": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 }
     },
     {
-        "ingredientPattern": "R ,PJ",
+        "ingredientPattern": "RA,PJ",
         "requiresTrait": "improviser",
         "ingredients": {
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 8},
+            "A": { "type": "block", "code": "game:metal-scraps", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-normal-*", "quantity": 2 },
-            "J": { "type": "item", "code": "game:jonasframes-gears02", "quantity": 1 }
+            "J": { "type": "item", "code": "game:gear-rusty", "quantity": 6 }
         },
         "width": 2,
         "height": 2,
@@ -63,9 +64,9 @@
         "requiresTrait": "improviser",
         "ingredients": {
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 16},
-            "A": { "type": "item", "code": "game:jonasparts-cylinder02", "quantity": 1 },
+            "A": { "type": "block", "code": "game:metal-parts", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-sturdy-*", "quantity": 2 },
-            "J": { "type": "item", "code": "game:jonasframes-gears02", "quantity": 1 }
+            "J": { "type": "item", "code": "game:gear-rusty", "quantity": 12 }
         },
         "width": 2,
         "height": 2,

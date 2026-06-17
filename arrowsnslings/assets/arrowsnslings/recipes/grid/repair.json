@@ -87,7 +87,7 @@
         "height": 2,
         "shapeless": false,
         "copyAttributesFrom": "S",
-		"repairRatio": 0.25,
+		"repairRatio": 0.3,
         "output": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 }
     },
     {
