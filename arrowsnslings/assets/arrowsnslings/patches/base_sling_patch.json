@@ -3,7 +3,7 @@
     "file": "game:itemtypes/tool/sling.json",
     "op": "replace",
     "path": "/durability",
-    "value": 200
+    "value": 350
     },
     {
         "file": "game:recipes/grid/tool/sling.json",
