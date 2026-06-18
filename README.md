@@ -12,11 +12,17 @@ Have not started
  - add javlins that can be thrown and stack
  - add atlatl for javlins
     -atlatl is craftable by all. MUST be worse than arrowsnslings buffed varients in some way.
-## Braizers
+## Rapids protection
+Have not started
+ - edit worldgen to spawn rapids with a cobble slab in their source 
+    - so they do not break with soil instability
+ - make the cobble the same type as the tope layer of rock
+## Standalone Braizers
 Have not started
  - Make a braizer that consumes fuel at ~1/4 normal fuel use
  - Cannot be used for cooking or butchery smoking
  - consumes several fuel at once
+ - two sizes (3? one 2x2 multiblock?)
 ## fork expanded molds lite
 Have not started
 ## Aliments

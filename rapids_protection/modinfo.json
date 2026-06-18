@@ -1,0 +1,11 @@
+{
+  "type": "content",
+  "modid": "rapidguard",
+  "name": "Rapid Protection",
+  "authors": ["Dyrosis"],
+  "description": "Adds a cobble half slab into the source block of rapids at worldgen",
+  "version": "0.1.0",
+  "Side": "Server",
+  "RequiredOnServer": true
+
+}
