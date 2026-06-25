@@ -1,147 +1,164 @@
 {
-	code: "bow",
-	tags: ["weapon", "weapon-ranged", "weapon-bow"],
-	variantgroups: [
-		{ code: "type", states: ["cable-backed", "composite"] },
+	"code": "bow",
+	"tags": ["weapon", "weapon-ranged", "weapon-bow"],
+	"variantgroups": [
+		{ "code": "type", "states": ["cable-backed", "composite"] }
 	],
-	class: "ItemBow",
-	maxstacksize: 1,
-	durabilityByType: {
+	"class": "ItemBow",
+	"maxstacksize": 1,
+	"durabilityByType": {
 		"cable-backed": 900,
 		"composite": 750
 	},
-	shape: {
-		base: "arrowsnslings:item/tool/bow/{type}",
-		alternates: [
-			{ base: "arrowsnslings:item/tool/bow/{type}-charge1" },
-			{ base: "arrowsnslings:item/tool/bow/{type}-charge2" },
-			{ base: "arrowsnslings:item/tool/bow/{type}-charge3" }
+	"shape": {
+		"base": "arrowsnslings:item/bow/{type}",
+		"alternates": [
+			{ "base": "arrowsnslings:item/bow/{type}-charge1" },
+			{ "base": "arrowsnslings:item/bow/{type}-charge2" },
+			{ "base": "arrowsnslings:item/bow/{type}-charge3" }
 		]
 	},
-	tool: "bow",
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
-	attributes: {
-		heldItemPitchFollow: 1,
-		aimAnimationByType: {
+	"texturesByType": {
+		"bow-cable-backed": {
+			"leather": {"base":"game:block/leather/plain"},
+			"aged": {"base":"game:block/wood/debarked/aged"},
+			"string": {"base":"game:item/resource/string"},
+			"blackbronze": {"base":"game:block/metal/ingot/blackbronze"},
+			"feather": {"base":"game:item/tool/feather"}
+		},
+		"bow-composite": {
+			"string": {"base":"game:item/resource/string"},
+			"aged": {"base":"game:block/wood/debarked/aged"},
+			"feather2": {"base":"game:item/tool/feather2"},
+			"iron": {"base":"game:block/metal/ingot/iron"},
+			"bone": {"base":"game:block/creature/bone"},
+			"leather": {"base":"game:block/leather/plain"}
+		}
+	},
+	"tool": "bow",
+	"creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	"attributes": {
+		"heldItemPitchFollow": 1,
+		"aimAnimationByType": {
 			"bow-cable-backed": "bowaimlong",
 			"bow-composite": "bowaimrecurve",
-			"*": "bowaim",
+			"*": "bowaim"
 		},
-		damageByType: {
+		"damageByType": {
 			"cable-backed": 4.5,
 			"composite": 5.5
 		},
-		damageTierByType: {
+		"damageTierByType": {
 			"bow-cable-backed": 0,
 			"bow-composite": 0
 		},
-		statModifierByType: {
-			"bbow-cable-backed": { "rangedWeaponsAcc": 0.2 },
+		"statModifierByType": {
+			"bow-cable-backed": { "rangedWeaponsAcc": 0.2 },
 			"bow-composite": { "rangedWeaponsAcc": 0.3 }
 		},
-		toolrackTransformByType: {
+		"toolrackTransformByType": {
 			"bow-cable-backed": {
-				translation: { x: 0.2, y: 0.95 },
-				rotation: { x: 2, y: 5, z: 0 },
-				scale: 1.76
+				"translation": { "x": 0.2, "y": 0.95 },
+				"rotation": { "x": 2, "y": 5, "z": 0 },
+				"scale": 1.76
 			},
 			"*": {
-				translation: { x: 0.14, y: 0.93 },
-				rotation: { x: 2, y: 5, z: 0 },
-				scale: 1.76
+				"translation": { "x": 0.14, "y": 0.93 },
+				"rotation": { "x": 2, "y": 5, "z": 0 },
+				"scale": 1.76
 			}
 		},
-			groundStorageTransformByType: {
+			"groundStorageTransformByType": {
 			"bow-cable-backed":{
-				translation: { x: -0.45, y: 0.1, z: 0.29 },
-				rotation: { x: 26, y: -180, z: -90 },
-				scale: 0.88
+				"translation": { "x": -0.45, "y": 0.1, "z": 0.29 },
+				"rotation": { "x": 26, "y": -180, "z": -90 },
+				"scale": 0.88
 			},
 			"*":{
-				translation: { x: -0.4, y: 0.1, z: 0.28 },
-				rotation: { x: 20, y: -180, z: -90 },
-				scale: 0.83
-			},
+				"translation": { "x": -0.4, "y": 0.1, "z": 0.28 },
+				"rotation": { "x": 20, "y": -180, "z": -90 },
+				"scale": 0.83
+			}
 		},
-		antlerMountable: true,
-		onAntlerMountTransformByType: {
+		"antlerMountable": true,
+		"onAntlerMountTransformByType": {
 			"*": {
-				translation: { x: -0.38, y: 0.533, z: 0.02 },
-				rotation: { x: -90, y: -180, z: -90 },
-				origin: { x: 0.5, y: -0, z: 0.5 }
+				"translation": { "x": -0.38, "y": 0.533, "z": 0.02 },
+				"rotation": { "x": -90, "y": -180, "z": -90 },
+				"origin": { "x": 0.5, "y": -0, "z": 0.5 }
 			}
 		}
 	},
-	attributesByType: {
+	"attributesByType": {
 		"*-cable-backed": {
-			attachableToEntity: {
-				categoryCode: "bowlong",
-				attachedShapeBySlotCode: {
-					"frontrightside": { base: "item/wearable/hooved/elk/weaponr-bow-cable-backed" },
-					"frontleftside": { base: "item/wearable/hooved/elk/weaponl-bow-cable-backed" }
+			"attachableToEntity": {
+				"categoryCode": "bowlong",
+				"attachedShapeBySlotCode": {
+					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-cable-backed" },
+					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-cable-backed" }
 				}
 			}
 		},
 		"*-composite": {
-			attachableToEntity: {
-				categoryCode: "bowlong",
-				attachedShapeBySlotCode: {
-					"frontrightside": { base: "item/wearable/hooved/elk/weaponr-bow-composite" },
-					"frontleftside": { base: "item/wearable/hooved/elk/weaponl-bow-composite" }
+			"attachableToEntity": {
+				"categoryCode": "bowlong",
+				"attachedShapeBySlotCode": {
+					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-composite" },
+					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-composite" }
 				}
 			}
 		}
 	},
-	behaviors: [{
-		name: "GroundStorable",
-		properties: {
-			layout: 'WallHalves',
-			wallOffYByType: {
-				"*": 2,
+	"behaviors": [{
+		"name": "GroundStorable",
+		"properties": {
+			"layout": "WallHalves",
+			"wallOffYByType": {
+				"*": 2
 			},
-			ctrlKey: true,
-			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
-			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 },
+			"ctrlKey": true,
+			"selectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.1, "z2": 1 },
+			"collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 0, "y2": 0, "z2": 0 }
 		}
 	}],
-	guiTransformByType: {
+	"guiTransformByType": {
 		"bow-cable-backed": {
-			translation: { x: 0, y: 0, z: 0 },
-			rotation: { x: -135, y: 25, z: 41 },
-			origin: { x: 0.47, y: 0, z: 0.59 },
-			scale: 1.35
+			"translation": { "x": 0, "y": 0, "z": 0 },
+			"rotation": { "x": -135, "y": 25, "z": 41 },
+			"origin": { "x": 0.47, "y": 0, "z": 0.59 },
+			"scale": 1.35
 		},
 		"bow-composite": {
-			translation: { x: 0, y: 0, z: 0 },
-			rotation: { x: -129, y: 25, z: 41 },
-			origin: { x: 0.47, y: 0, z: 0.55 },
-			scale: 1.36
+			"translation": { "x": 0, "y": 0, "z": 0 },
+			"rotation": { "x": -129, "y": 25, "z": 41 },
+			"origin": { "x": 0.47, "y": 0, "z": 0.55 },
+			"scale": 1.36
 		},
 		"*": {
-			translation: { x: 0, y: 0, z: 0 },
-			rotation: { x: -129, y: 25, z: 41 },
-			origin: { x: 0.47, y: 0, z: 0.55 },
-			scale: 1.64
+			"translation": { "x": 0, "y": 0, "z": 0 },
+			"rotation": { "x": -129, "y": 25, "z": 41 },
+			"origin": { "x": 0.47, "y": 0, "z": 0.55 },
+			"scale": 1.64
 		}
 	},
-	groundTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 0, y: 0, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 4.8
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": 0, "y": 0, "z": 0 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 4.8
 	},
-	tpHandTransformByType: {
+	"tpHandTransformByType": {
 		"bow-composite": {
-			translation: { x: -0.56, y: 0.01, z: -0.54 },
-			rotation: { x: 107, y: 11, z: 10 },
-			origin: { x: 0.5, y: 0, z: 0.5 },
-			scale: 0.93
+			"translation": { "x": -0.56, "y": 0.01, "z": -0.54 },
+			"rotation": { "x": 107, "y": 11, "z": 10 },
+			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+			"scale": 0.93
 		},
 		"bow-cable-backed": {
-			translation: { x: -0.4199, y: -0, z: -0.39 },
-			rotation: { x: 107, y: 11, z: 10 },
-			origin: { x: 0.5, y: 0, z: 0.5 },
-			scale: 1.29
+			"translation": { "x": -0.4199, "y": -0, "z": -0.39 },
+			"rotation": { "x": 107, "y": 11, "z": 10 },
+			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+			"scale": 1.29
 		}
 	}
 }

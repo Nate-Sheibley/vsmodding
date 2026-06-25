@@ -15,14 +15,6 @@
 		"beeswax": [8,8],
 		"leather": [16,16]
 	},
-	"textures": {
-		"string": "item/resource/string",
-		"aged": "block/wood/debarked/aged",
-		"feather2": "item/tool/feather2",
-		"iron": "block/metal/ingot/iron",
-		"bone": "block/creature/bone",
-		"leather": "block/leather/plain"
-	},
 	"elements": [
 		{
 			"name": "origin",
