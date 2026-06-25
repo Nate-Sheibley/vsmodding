@@ -3,8 +3,8 @@
   "modid": "arrowsnslings",
   "name": "Arrows and Slings",
   "authors": ["Dyrosis"],
-  "description": "Adds progressive sling types, and rebalances arrows",
-  "version": "1.1.0",
+  "description": "Adds progressive sling types, rebalances arrows and bows, and adds 2 hunter craftable bows",
+  "version": "1.2.0",
   "Side": "Universal",
   "RequiredOnClient": true,
   "RequiredOnServer": true
