@@ -2,13 +2,12 @@
 	"code": "bow",
 	"tags": ["weapon", "weapon-ranged", "weapon-bow"],
 	"variantgroups": [
-		{ "code": "type", "states": ["cable-backed", "composite"] }
+		{ "code": "type", "states": ["cablebacked"] }
 	],
 	"class": "ItemBow",
 	"maxstacksize": 1,
 	"durabilityByType": {
-		"cable-backed": 900,
-		"composite": 750
+		"bow-cablebacked": 900
 	},
 	"shape": {
 		"base": "arrowsnslings:item/bow/{type}",
@@ -19,20 +18,12 @@
 		]
 	},
 	"texturesByType": {
-		"bow-cable-backed": {
+		"bow-cablebacked": {
 			"leather": {"base":"game:block/leather/plain"},
 			"aged": {"base":"game:block/wood/debarked/aged"},
 			"string": {"base":"game:item/resource/string"},
 			"blackbronze": {"base":"game:block/metal/ingot/blackbronze"},
 			"feather": {"base":"game:item/tool/feather"}
-		},
-		"bow-composite": {
-			"string": {"base":"game:item/resource/string"},
-			"aged": {"base":"game:block/wood/debarked/aged"},
-			"feather2": {"base":"game:item/tool/feather2"},
-			"iron": {"base":"game:block/metal/ingot/iron"},
-			"bone": {"base":"game:block/creature/bone"},
-			"leather": {"base":"game:block/leather/plain"}
 		}
 	},
 	"tool": "bow",
@@ -40,24 +31,20 @@
 	"attributes": {
 		"heldItemPitchFollow": 1,
 		"aimAnimationByType": {
-			"bow-cable-backed": "bowaimlong",
-			"bow-composite": "bowaimrecurve",
+			"bow-cablebacked": "bowaimlong",
 			"*": "bowaim"
 		},
 		"damageByType": {
-			"cable-backed": 4.5,
-			"composite": 5.5
+			"bow-cablebacked": 4.5
 		},
 		"damageTierByType": {
-			"bow-cable-backed": 0,
-			"bow-composite": 0
+			"bow-cablebacked": 0
 		},
 		"statModifierByType": {
-			"bow-cable-backed": { "rangedWeaponsAcc": 0.2 },
-			"bow-composite": { "rangedWeaponsAcc": 0.3 }
+			"bow-cablebacked": { "rangedWeaponsAcc": 0.2 }
 		},
 		"toolrackTransformByType": {
-			"bow-cable-backed": {
+			"bow-cablebacked": {
 				"translation": { "x": 0.2, "y": 0.95 },
 				"rotation": { "x": 2, "y": 5, "z": 0 },
 				"scale": 1.76
@@ -69,7 +56,7 @@
 			}
 		},
 			"groundStorageTransformByType": {
-			"bow-cable-backed":{
+			"bow-cablebacked":{
 				"translation": { "x": -0.45, "y": 0.1, "z": 0.29 },
 				"rotation": { "x": 26, "y": -180, "z": -90 },
 				"scale": 0.88
@@ -90,21 +77,12 @@
 		}
 	},
 	"attributesByType": {
-		"*-cable-backed": {
+		"bow-cablebacked": {
 			"attachableToEntity": {
 				"categoryCode": "bowlong",
 				"attachedShapeBySlotCode": {
-					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-cable-backed" },
-					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-cable-backed" }
-				}
-			}
-		},
-		"*-composite": {
-			"attachableToEntity": {
-				"categoryCode": "bowlong",
-				"attachedShapeBySlotCode": {
-					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-composite" },
-					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-composite" }
+					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-cablebacked" },
+					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-cablebacked" }
 				}
 			}
 		}
@@ -122,17 +100,11 @@
 		}
 	}],
 	"guiTransformByType": {
-		"bow-cable-backed": {
+		"bow-cablebacked": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
 			"rotation": { "x": -135, "y": 25, "z": 41 },
 			"origin": { "x": 0.47, "y": 0, "z": 0.59 },
 			"scale": 1.35
-		},
-		"bow-composite": {
-			"translation": { "x": 0, "y": 0, "z": 0 },
-			"rotation": { "x": -129, "y": 25, "z": 41 },
-			"origin": { "x": 0.47, "y": 0, "z": 0.55 },
-			"scale": 1.36
 		},
 		"*": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
@@ -148,13 +120,7 @@
 		"scale": 4.8
 	},
 	"tpHandTransformByType": {
-		"bow-composite": {
-			"translation": { "x": -0.56, "y": 0.01, "z": -0.54 },
-			"rotation": { "x": 107, "y": 11, "z": 10 },
-			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
-			"scale": 0.93
-		},
-		"bow-cable-backed": {
+		"bow-cablebacked": {
 			"translation": { "x": -0.4199, "y": -0, "z": -0.39 },
 			"rotation": { "x": 107, "y": 11, "z": 10 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
