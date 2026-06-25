@@ -64,11 +64,11 @@
 	"attributes": {
 		"aimAnimation": "slingaimbalearic",
 		"damage": 2.5,
-		"toolrackTransform": {
-			"translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
-			"rotation": { "x": 1, "y": 180, "z": 0 },
-			"scale": 1.25
-		}
+        "toolrackTransform": {
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
+            "rotation": { "x": 1, "y": 180, "z": 0 },
+            "scale": 1.75
+        }
 	},
 	"fpHandTransform": {
 		"translation": { "x": -0.3, "y": -0.7, "z": 0.4 },
@@ -99,55 +99,57 @@
         "damage": 1.5,
         "aimAnimation": "slingaimbalearic",
         "toolrackTransform": {
-            "translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
             "rotation": { "x": 1, "y": 180, "z": 0 },
-            "scale": 1.25
+            "scale": 1.75
         }
         },
         "sling-flax": {
         "damage": 3,
         "aimAnimation": "slingaimbalearic",
         "toolrackTransform": {
-            "translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
             "rotation": { "x": 1, "y": 180, "z": 0 },
-            "scale": 1.25
+            "scale": 1.75
         }
         },
         "sling-leather": {
         "damage": 4,
         "aimAnimation": "slingaimbalearic",
         "toolrackTransform": {
-            "translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
             "rotation": { "x": 1, "y": 180, "z": 0 },
-            "scale": 1.25
+            "scale": 1.75
         }
         },
         "sling-jonasleather": {
         "damage": 4.5,
         "aimAnimation": "slingaimbalearic",
         "toolrackTransform": {
-            "translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
             "rotation": { "x": 1, "y": 180, "z": 0 },
-            "scale": 1.25
+            "scale": 1.75
         }
         },
         "sling-hardleather": {
         "damage": 5,
         "aimAnimation": "slingaimbalearic",
         "toolrackTransform": {
-            "translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
             "rotation": { "x": 1, "y": 180, "z": 0 },
-            "scale": 1.25
+            "scale": 1.75
         }
         },
         "sling-jonashardleather": {
         "damage": 5.5,
         "aimAnimation": "slingaimbalearic",
         "toolrackTransform": {
-            "translation": { "x": -0.35, "y": 0.73, "z": 0.1 },
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
             "rotation": { "x": 1, "y": 180, "z": 0 },
-            "scale": 1.25
+            "scale": 1.75
         }
         }
 }
 }
+
+
