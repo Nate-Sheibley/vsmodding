@@ -4,6 +4,7 @@ A couple vintage story mods
 # TODO
 ## Slings and arrows
  - Add Add horn/ivory bow varients, and change hunter/bow progression accordingly 
+   - model elk wearable shapes properly
  - Add (malefactor only) craftable lead and clay sling projectiles
 ## Spears and Javlins
 Have not started
