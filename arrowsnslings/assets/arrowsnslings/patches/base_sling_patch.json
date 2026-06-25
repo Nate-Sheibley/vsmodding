@@ -33,5 +33,16 @@
                 { "base": "arrowsnslings:item/slings/base/sling-charge3" }
       ]
     }
+    },
+    {
+        "file": "game:itemtypes/tool/sling.json",
+        "op": "replace",
+        "path": "/attributes/toolrackTransform",
+        "value": {
+            "translation": { "x": -0.35, "y": 0.8, "z": 0.1 },
+            "rotation": { "x": 1, "y": 180, "z": 0 },
+            "scale": 1.75
+        }
     }
+
 ]
