@@ -2,12 +2,13 @@
 	"code": "bow",
 	"tags": ["weapon", "weapon-ranged", "weapon-bow"],
 	"variantgroups": [
-		{ "code": "type", "states": ["cablebacked"] }
+		{ "code": "type", "states": ["cablebacked", "composite"] }
 	],
 	"class": "ItemBow",
 	"maxstacksize": 1,
 	"durabilityByType": {
-		"bow-cablebacked": 900
+		"bow-cablebacked": 700,
+		"bow-composite": 850
 	},
 	"shape": {
 		"base": "arrowsnslings:item/bow/{type}",
@@ -24,7 +25,17 @@
 			"string": {"base":"game:item/resource/string"},
 			"blackbronze": {"base":"game:block/metal/ingot/blackbronze"},
 			"feather": {"base":"game:item/tool/feather"}
+		},
+		"bow-composite": {
+			"bone": {"base":"game:block/creature/bone"},
+			"leather": {"base":"game:block/leather/plain"},
+			"iron": {"base":"game:block/metal/ingot/iron"},
+			"oak": {"base":"game:block/wood/debarked/oak"},
+			"string": {"base":"game:item/resource/string"},
+			"aged": {"base":"game:block/wood/debarked/aged"},
+			"feather": {"base":"game:item/tool/feather"}
 		}
+		
 	},
 	"tool": "bow",
 	"creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"] },
@@ -32,16 +43,20 @@
 		"heldItemPitchFollow": 1,
 		"aimAnimationByType": {
 			"bow-cablebacked": "bowaimlong",
+			"bow-composite": "bowaimrecurve",
 			"*": "bowaim"
 		},
 		"damageByType": {
-			"bow-cablebacked": 4.5
+			"bow-cablebacked": 4.5,
+			"bow-composite": 5.5
 		},
 		"damageTierByType": {
-			"bow-cablebacked": 0
+			"bow-cablebacked": 0,
+			"bow-composite": 0
 		},
 		"statModifierByType": {
-			"bow-cablebacked": { "rangedWeaponsAcc": 0.2 }
+			"bow-cablebacked": { "rangedWeaponsAcc": 0.2 },
+			"bow-composite": { "rangedWeaponsAcc": 0.3 }
 		},
 		"toolrackTransformByType": {
 			"bow-cablebacked": {
@@ -49,7 +64,7 @@
 				"rotation": { "x": 2, "y": 5, "z": 0 },
 				"scale": 1.76
 			},
-			"*": {
+			"bow-composite": {
 				"translation": { "x": 0.14, "y": 0.93 },
 				"rotation": { "x": 2, "y": 5, "z": 0 },
 				"scale": 1.76
@@ -61,7 +76,7 @@
 				"rotation": { "x": 26, "y": -180, "z": -90 },
 				"scale": 0.88
 			},
-			"*":{
+			"bow-composite":{
 				"translation": { "x": -0.4, "y": 0.1, "z": 0.28 },
 				"rotation": { "x": 20, "y": -180, "z": -90 },
 				"scale": 0.83
@@ -85,6 +100,15 @@
 					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-cablebacked" }
 				}
 			}
+		},
+		"bow-composite": {
+			"attachableToEntity": {
+				"categoryCode": "bowrecurve",
+				"attachedShapeBySlotCode": {
+					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-composite" },
+					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-composite" }
+				}
+			}
 		}
 	},
 	"behaviors": [{
@@ -106,11 +130,11 @@
 			"origin": { "x": 0.47, "y": 0, "z": 0.59 },
 			"scale": 1.35
 		},
-		"*": {
+		"bow-composite": {
 			"translation": { "x": 0, "y": 0, "z": 0 },
 			"rotation": { "x": -129, "y": 25, "z": 41 },
 			"origin": { "x": 0.47, "y": 0, "z": 0.55 },
-			"scale": 1.64
+			"scale": 1.36
 		}
 	},
 	"groundTransform": {
@@ -125,6 +149,12 @@
 			"rotation": { "x": 107, "y": 11, "z": 10 },
 			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
 			"scale": 1.29
+		},
+		"bow-composite": {
+			"translation": { "x": -0.56, "y": 0.01, "z": -0.54 },
+			"rotation": { "x": 107, "y": 11, "z": 10 },
+			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+			"scale": 0.93
 		}
 	}
 }
