@@ -103,7 +103,7 @@
 		},
 		"bow-composite": {
 			"attachableToEntity": {
-				"categoryCode": "bowrecurve",
+				"categoryCode": "bowlong",
 				"attachedShapeBySlotCode": {
 					"frontrightside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponr-bow-composite" },
 					"frontleftside": { "base": "arrowsnslings:item/wearable/hooved/elk/weaponl-bow-composite" }
