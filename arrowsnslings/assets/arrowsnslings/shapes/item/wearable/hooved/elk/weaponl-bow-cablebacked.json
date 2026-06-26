@@ -7,29 +7,34 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textureSizes": {
-		"feather": [16,16],
-		"blackbronze": [16,16],
 		"string": [16,16],
-		"arrow": [8,8],
-		"aged": [16,16],
-		"oak": [16,16],
-		"acacia": [16,16],
 		"bone": [16,16],
-		"stick": [8,8],
-		"leather": [16,16]
+		"leather": [16,16],
+		"arrow": [8,8],
+		"stick": [16,16],
+		"feather": [16,16],
+		"aged": [16,16],
+		"oak": [16,16]
 	},
-	"textures": {
-	},
+"textures": {
+			"bone": "game:block/creature/bone",
+			"leather": "game:block/leather/plain",
+			"iron": "game:block/metal/ingot/iron",
+			"oak": "game:block/wood/debarked/oak",
+			"string": "game:item/resource/string",
+			"aged": "game:block/wood/debarked/aged",
+			"feather": "game:item/tool/feather"
+		},
 	"elements": [
 		{
 			"name": "origin",
 			"stepParentName": "LeftFrontStorage",
-			"from": [ 4.0, 5.0, 0.2 ],
-			"to": [ 4.0, 5.0, 0.2 ],
-			"rotationOrigin": [ 4.0, 5.0, 0.2 ],
-			"rotationX": 113.0,
-			"rotationY": 140.0,
-			"rotationZ": -13.0,
+			"from": [ 4.0, 5.0, 1.2 ],
+			"to": [ 4.0, 5.0, 1.2 ],
+			"rotationOrigin": [ 4.0, 5.0, 1.2 ],
+			"rotationX": -81.0,
+			"rotationY": 41.5,
+			"rotationZ": -7.0,
 			"faces": {
 				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
 				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },

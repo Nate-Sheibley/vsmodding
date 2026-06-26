@@ -29,12 +29,12 @@
 		{
 			"name": "origin",
 			"stepParentName": "RightFrontStorage",
-			"from": [ 4.0, 4.8, 1.0 ],
-			"to": [ 4.0, 4.8, 1.0 ],
-			"rotationOrigin": [ 4.0, 5.0, 1.0 ],
-			"rotationX": 110.0,
-			"rotationY": 140.0,
-			"rotationZ": -14.0,
+			"from": [ 4.0, 5.0, 0.0 ],
+			"to": [ 4.0, 5.0, 0.0 ],
+			"rotationOrigin": [ 4.0, 5.0, 0.0 ],
+			"rotationX": -81.0,
+			"rotationY": 41.5,
+			"rotationZ": -3.0,
 			"faces": {
 				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
 				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
