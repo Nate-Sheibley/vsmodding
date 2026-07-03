@@ -5,10 +5,11 @@
 	"maxstacksize": 1,
     "tool": "sling",
     "variantgroups": [
-    { "code": "type", "states": ["reed", "flax", "leather", "jonasleather", "hardleather", "jonashardleather"] }
+    { "code": "type", "states": ["reed", "pelt", "flax", "leather", "jonasleather", "hardleather", "jonashardleather"] }
   ],
 	"durabilitybytype": {
     "sling-reed": 100,
+    "sling-pelt": 350,
     "sling-flax": 200,
 	"sling-leather": 450,
 	"sling-jonasleather": 600,
@@ -21,6 +22,13 @@
       "alternates": [
         { "base": "arrowsnslings:item/slings/reed/sling-charge2" },
         { "base": "arrowsnslings:item/slings/reed/sling-charge3" }
+      ]
+    },
+    "sling-pelt": {
+      "base": "arrowsnslings:item/slings/base/folded",
+      "alternates": [
+        { "base": "arrowsnslings:item/slings/base/sling-charge2" },
+        { "base": "arrowsnslings:item/slings/base/sling-charge3" }
       ]
     },
     "sling-flax": {
@@ -97,6 +105,10 @@
     "attributesbytype": {
         "sling-reed": {
         "damage": 1.5,
+        "aimAnimation": "slingaimbalearic"
+        },
+        "sling-pelt": {
+        "damage": 2.5,
         "aimAnimation": "slingaimbalearic"
         },
         "sling-flax": {

@@ -1,14 +1,9 @@
 [
     {
-    "file": "game:itemtypes/tool/sling.json",
-    "op": "replace",
-    "path": "/durability",
-    "value": 350
-    },
-    {
         "file": "game:recipes/grid/tool/sling.json",
-        "op": "remove",
-        "path":"/0/requiresTrait"
+        "op": "add",
+        "path": "/0/enabled",
+        "value": false
     },
     {
         "file": "game:recipes/grid/tool/sling.json",
@@ -21,18 +16,6 @@
         "op": "add",
         "path": "/2/enabled",
         "value": false
-    },
-    {
-        "file": "game:itemtypes/tool/sling.json",
-        "op": "replace",
-        "path": "/shape",
-        "value": {
-        "base": "arrowsnslings:item/slings/base/folded",
-            "alternates": [
-                { "base": "arrowsnslings:item/slings/base/sling-charge2" },
-                { "base": "arrowsnslings:item/slings/base/sling-charge3" }
-      ]
-    }
     },
     {
         "file": "game:itemtypes/tool/sling.json",
