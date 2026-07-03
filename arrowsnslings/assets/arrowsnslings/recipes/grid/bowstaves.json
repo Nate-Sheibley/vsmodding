@@ -1,0 +1,13 @@
+[
+	{
+		"ingredientPattern": "HS,_L,_L",
+		"ingredients": {
+            "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true  },
+			"S": { "type": "item", "tags": ["tool-axe"], "isTool": true  },
+			"L": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood", "allowedVariants": ["oak", "maple", "walnut"] }
+		},
+		"width": 2,
+		"height": 3,
+		"output": { "type": "item", "code": "game:bowstave-long-raw", "quantity": 1  }
+	}
+]

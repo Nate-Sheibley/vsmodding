@@ -1,0 +1,37 @@
+[
+    {
+		"ingredientPattern": "RFT,BLT,RFT",
+		"requiresTrait": "bowyer",
+		"recipeGroup": 1,
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-long-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "game:{coating}" },
+            "R": { "type": "item", "code": "game:rope" }
+		},
+		"allowedVariants": {
+			"coating": ["fat-rendered", "resin", "beeswax"]
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-cablebacked", "quantity": 1  }
+	},
+    {
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "game:{horn}" },
+			"M": { "type": "item", "code": "game:bushmeat-raw" }
+		},
+		"allowedVariants": {
+			"horn": ["antler-*-05","antler-*-06","antler-*-07","antler-*-08","antler-*-09"]
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  }
+	}
+]

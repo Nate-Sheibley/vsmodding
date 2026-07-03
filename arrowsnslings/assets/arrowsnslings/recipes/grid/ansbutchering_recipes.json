@@ -1,0 +1,32 @@
+[
+{
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "butchering:ivory-raw" },
+			"M": { "type": "item", "code": "game:bushmeat-raw" }
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  },
+		"dependsOn": [ { "modid": "butchering" } ]
+	}, 
+	{
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "butchering:ivory-raw" },
+			"M": { "type": "item", "code": "butchering:sinew-dry", "quantity": 4}
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  },
+		"dependsOn": [ { "modid": "butchering" } ]
+	}
+]
