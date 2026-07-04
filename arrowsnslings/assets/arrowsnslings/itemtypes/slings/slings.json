@@ -1,6 +1,6 @@
 {
 	"code": "sling",
-	"class": "ItemSling",
+	"class": "ItemAnSSling",
 	"tags": ["weapon", "weapon-ranged"],
 	"maxstacksize": 1,
     "tool": "sling",

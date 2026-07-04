@@ -1,0 +1,37 @@
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>arrowsnslings</AssemblyName>
+    <RootNamespace>arrowsnslings</RootNamespace>
+  </PropertyGroup>
+
+ <ItemGroup>
+
+    <!-- Core API -->
+    <Reference Include="VintagestoryAPI">
+      <HintPath>C:\Program Files\Vintagestory\VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Game systems (ItemStone, etc.) -->
+    <Reference Include="VSSurvivalMod">
+      <HintPath>C:\Program Files\Vintagestory\VSSurvivalMod.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Projectiles, combat, etc. -->
+    <Reference Include="VSEssentials">
+      <HintPath>C:\Program Files\Vintagestory\VSEssentials.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+  </ItemGroup>
+
+</Project>
+```
