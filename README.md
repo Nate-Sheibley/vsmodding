@@ -29,6 +29,9 @@ Have not started
 ## Aliments
 Have not started
  - add a 6th 'nutrition' bar that increases with activities like lead, chrome  working, and mining coal, lead, chromite, and cinnibar
+# Temporal gear rack
+ - Add an animated (configurable) temporal gear holder
+ - recipe: 1 axle, some boards.
 
 
  
