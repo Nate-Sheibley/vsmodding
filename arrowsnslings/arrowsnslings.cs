@@ -7,8 +7,9 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
+using Vintagestory.GameContent;
 
-namespace Vintagestory.GameContent;
+namespace arrowsnslings;
 
 public class ItemAnSSling : Item
 {
@@ -28,16 +29,16 @@ public class ItemAnSSling : Item
     {
         var attrs = ammo.Collectible.Attributes;
 
-        if (attrs?["ansprojectile"] != null)
-        {
-            return new AssetLocation(attrs["ansprojectile"].AsString());
-        }
-
         if (ammo.Collectible is ItemStone)
         {
             return new AssetLocation(
                 "thrownstone-" + ammo.Collectible.Variant["rock"]
             );
+        }
+        
+        if (attrs?["ansprojectile"] != null)
+        {
+            return new AssetLocation(attrs["ansprojectile"].AsString());
         }
 
         return null;
