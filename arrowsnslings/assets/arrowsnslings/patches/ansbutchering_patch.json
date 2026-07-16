@@ -12,6 +12,69 @@
 		"path": "/attributes/breakChanceOnImpactByType/*-bone",
 		"value": 0.2,
 		"dependsOn": [ { "modid": "butchering" } ]
+	},
+	{
+		"file": "arrowsnslings:recipes/grid/bows.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "butchering:ivory-raw" },
+			"M": { "type": "item", "code": "butchering:sinew-dry", "quantity": 4}
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  }
+		},
+		"dependsOn": [ { "modid": "butchering" } ]
+	},
+	{
+		"file": "arrowsnslings:recipes/grid/bows.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "butchering:ivory-raw" },
+			"M": { "type": "item", "code": "game:bushmeat-raw" }
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  }
+		},
+		"dependsOn": [ { "modid": "butchering" } ]
+	},
+	{
+		"file": "arrowsnslings:recipes/grid/bows.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+		"ingredientPattern": "RFT,BLT,RFT",
+        "recipeGroup": 2,
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-long-dry" },
+			"T": { "type": "item", "code": "butchering:sinew-dry", "quantity": 4},
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "game:{coating}" },
+            "R": { "type": "item", "code": "game:rope" }
+		},
+		"allowedVariants": {
+			"coating": ["fat-rendered", "resin", "beeswax"]
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-cablebacked", "quantity": 1  },
+		},
+		"dependsOn": [ { "modid": "butchering" } ]
 	}
-	
 ]
