@@ -1,6 +1,7 @@
 [
     {
         "ingredientPattern": "S,P",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-normal-*", "quantity": 1 }
@@ -14,6 +15,7 @@
     },    
     {
         "ingredientPattern": "S,R",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-leather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 1 }
@@ -27,6 +29,7 @@
     },
     {
         "ingredientPattern": "S,P",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-normal-*", "quantity": 1 }
@@ -40,6 +43,7 @@
     },    
     {
         "ingredientPattern": "S,R",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-jonasleather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 1 }
@@ -53,6 +57,7 @@
     },
     {
         "ingredientPattern": "S,P",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-sturdy-*", "quantity": 1 }
@@ -66,6 +71,7 @@
     },    
     {
         "ingredientPattern": "S,R",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-hardleather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 1 }
@@ -79,6 +85,7 @@
     },
     {
         "ingredientPattern": "S,P",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:gear-temporal", "quantity": 1 }
@@ -92,6 +99,7 @@
     },
     {
         "ingredientPattern": "S,P",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 },
             "P": { "type": "item", "code": "game:leather-sturdy-*", "quantity": 1 }
@@ -105,6 +113,7 @@
     },    
     {
         "ingredientPattern": "S,R",
+        "recipeGroup": 2,
         "ingredients": {
             "S": { "type": "item", "code": "arrowsnslings:sling-jonashardleather", "quantity": 1 },
             "R": { "type": "item", "code": "game:flaxtwine", "quantity": 2 }
