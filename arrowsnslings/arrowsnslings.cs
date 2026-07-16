@@ -28,9 +28,9 @@ public class ItemAnSSling : Item
     {
         var attrs = ammo.Collectible.Attributes;
 
-        if (attrs?["projectile"] != null)
+        if (attrs?["ansprojectile"] != null)
         {
-            return new AssetLocation(attrs["projectile"].AsString());
+            return new AssetLocation(attrs["ansprojectile"].AsString());
         }
 
         if (ammo.Collectible is ItemStone)
@@ -55,9 +55,10 @@ public class ItemAnSSling : Item
             List<ItemStack> list = new List<ItemStack>();
             foreach (CollectibleObject collectible in api.World.Collectibles)
             {
-                if (collectible is ItemStone)
+                ItemStack stack = new ItemStack(collectible);
+                if (IsSlingAmmo(stack))
                 {
-                    list.Add(new ItemStack(collectible));
+                    list.Add(stack);
                 }
             }
             return new WorldInteraction[1]
@@ -223,7 +224,7 @@ public class ItemAnSSling : Item
             double num2 = 0.8 * (double)byEntity.Stats.GetBlended("bowDrawingStrength");
             float rangeMult = itemStack.Collectible.Attributes?["rangeMult"].AsFloat(1f) ?? 1f;
             double speed = num2 * rangeMult;
-            float acc = 0.75f - itemStack.Collectible.Attributes?["accModifier"].AsFloat(0f);
+            float acc = 0.75f - (itemStack.Collectible.Attributes?["accModifier"].AsFloat(0f) ?? 0f);
             EntityProjectileBase.SpawnProjectile(entity, byEntity, speed, acc, -0.2, 0.1, 0.4, 20.0);
             slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot);
             byEntity.AnimManager.StartAnimation("slingthrowbalearic");
