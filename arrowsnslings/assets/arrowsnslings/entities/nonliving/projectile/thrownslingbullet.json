@@ -37,7 +37,7 @@
 		"behaviors": [{ "code": "passivephysics" }, { "code": "interpolateposition" }]
 	},
 	"server": {
-		"behaviors": [{ "code": "passivephysics" }, { "code": "despawn", "minSeconds": 300 }, { "code": "entitystatetags" }],
+		"behaviors": [{ "code": "passivephysics" }, { "code": "despawn", "minSeconds": 300 }, { "code": "entitystatetags" }]
 	},
 	"sounds": {
 	}

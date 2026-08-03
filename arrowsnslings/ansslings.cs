@@ -27,8 +27,7 @@ public class ItemAnSSling : Item
 
     private AssetLocation GetProjectileCode(ItemStack ammo)
     {
-        var attrs = ammo.Collectible.Attributes;
-
+        
         if (ammo.Collectible is ItemStone)
         {
             return new AssetLocation(
@@ -36,9 +35,9 @@ public class ItemAnSSling : Item
             );
         }
         
-        if (attrs?["ansprojectile"] != null)
+        if (ammo.Collectible.Attributes?["ansprojectile"] != null)
         {
-            return new AssetLocation(attrs["ansprojectile"].AsString());
+            return new AssetLocation(ammo.Collectible.Attributes["ansprojectile"].AsString());
         }
 
         return null;
