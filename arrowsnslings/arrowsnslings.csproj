@@ -2,34 +2,35 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <OutputPath>/home/mox/Projects/VSmods/vsmodding/arrowsnslings/compiled</OutputPath>
+    <OutputPath>/home/mox/Projects/vsmodding/arrowsnslings/compiled</OutputPath>
     <AssemblyName>arrowsnslings</AssemblyName>
     <RootNamespace>arrowsnslings</RootNamespace>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
  <ItemGroup>
 
      <!-- Core  -->
     <Reference Include="Vintagestory">
-      <HintPath>/home/mox/.config/VSLGameVersions/1.22.3/Vintagestory.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Vintagestory.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Core API -->
     <Reference Include="VintagestoryAPI">
-      <HintPath>/home/mox/.config/VSLGameVersions/1.22.3/VintagestoryAPI.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Game systems (ItemStone, etc.) -->
     <Reference Include="VSSurvivalMod">
-      <HintPath>/home/mox/.config/VSLGameVersions/1.22.3/Mods/VSSurvivalMod.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Mods/VSSurvivalMod.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Projectiles, combat, etc. -->
     <Reference Include="VSEssentials">
-      <HintPath>/home/mox/.config/VSLGameVersions/1.22.3/Mods/VSEssentials.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Mods/VSEssentials.dll</HintPath>
       <Private>false</Private>
     </Reference>
 

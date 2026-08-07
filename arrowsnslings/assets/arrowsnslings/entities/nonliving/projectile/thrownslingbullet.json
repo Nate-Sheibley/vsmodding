@@ -16,17 +16,17 @@
 	"client": {
 		"renderer": "Shape",
     "texturesByType": {
-        "slingbullet-clay": {
+        "thrownslingbullet-clay": {
             "material": {
                 "base": "game:block/stone/rock/sandstone4"
             }
         },
-        "slingbullet-lead": {
+        "thrownslingbullet-lead": {
             "material": {
                 "base": "game:block/metal/ingot/lead"
             }
         },
-        "slingbullet-unfired": {
+        "thrownslingbullet-unfired": {
             "material": {
                 "base": "game:block/stone/rock/chert4"
             }

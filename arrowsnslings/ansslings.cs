@@ -34,10 +34,12 @@ public class ItemAnSSling : Item
                 "thrownstone-" + ammo.Collectible.Variant["rock"]
             );
         }
-        
-        if (ammo.Collectible.Attributes?["ansprojectile"] != null)
+
+        if (IsSlingAmmo(ammo))
         {
-            return new AssetLocation(ammo.Collectible.Attributes["ansprojectile"].AsString());
+            return new AssetLocation(
+                "arrowsnslings:thrownslingbullet-" + ammo.Collectible.Variant["material"]
+            );
         }
 
         return null;
