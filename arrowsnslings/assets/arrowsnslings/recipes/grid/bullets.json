@@ -1,0 +1,39 @@
+[
+    {
+        "ingredientPattern": "MT",
+        "recipeGroup": 1,
+        "ingredients": {
+            "M": { "type": "item", "code": "game:ingot-lead", "quantity": 1},
+            "T": { "type": "item", "tags": ["tool-knife"], "isTool": true  }
+        },
+        "width": 1,
+        "height": 1,
+        "shapeless": true,
+        "output": { "type": "item", "code": "arrowsnslings:slingbullet-lead", "quantity": 16 }
+    },
+    {
+        "ingredientPattern": "MT",
+        "recipeGroup": 1,
+        "ingredients": {
+            "M": { "type": "item", "code": "game:clay-*", "quantity": 1},
+            "K": { "type": "block", "code": "bowl-*-fired"}
+        },
+        "width": 1,
+        "height": 1,
+        "shapeless": true,
+        "output": { "type": "item", "code": "arrowsnslings:slingbullet-lead", "quantity": 4 }
+    },
+    {
+        "ingredientPattern": "MT",
+        "recipeGroup": 1,
+        "ingredients": {
+            "M": { "type": "item", "code": "game:rawbrick-*", "quantity": 1},
+            "T": { "type": "item", "tags": ["tool-knife"], "isTool": true  }
+        },
+        "width": 1,
+        "height": 1,
+        "shapeless": true,
+        "output": { "type": "item", "code": "arrowsnslings:slingbullet-lead", "quantity": 16 }
+    },
+
+]
