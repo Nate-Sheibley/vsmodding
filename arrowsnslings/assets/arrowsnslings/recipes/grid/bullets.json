@@ -4,36 +4,48 @@
         "recipeGroup": 1,
         "ingredients": {
             "M": { "type": "item", "code": "game:ingot-lead", "quantity": 1},
-            "T": { "type": "item", "tags": ["tool-knife"], "isTool": true  }
+            "T": { "type": "item", "tags": ["tool-knife"], "isTool": true, "toolDurabilityCost":48 }
         },
-        "width": 1,
+        "width": 2,
         "height": 1,
         "shapeless": true,
         "output": { "type": "item", "code": "arrowsnslings:slingbullet-lead", "quantity": 16 }
     },
     {
         "ingredientPattern": "MT",
-        "recipeGroup": 1,
+        "recipeGroup": 2,
         "ingredients": {
             "M": { "type": "item", "code": "game:clay-*", "quantity": 1},
-            "K": { "type": "block", "code": "bowl-*-fired"}
+            "T": { "type": "block", "code": "game:bowl-*-fired"}
         },
-        "width": 1,
+        "width": 2,
         "height": 1,
         "shapeless": true,
-        "output": { "type": "item", "code": "arrowsnslings:slingbullet-lead", "quantity": 4 }
+        "output": { "type": "item", "code": "arrowsnslings:slingbullet-unfired", "quantity": 4 }
     },
     {
         "ingredientPattern": "MT",
         "recipeGroup": 1,
         "ingredients": {
             "M": { "type": "item", "code": "game:rawbrick-*", "quantity": 1},
-            "T": { "type": "item", "tags": ["tool-knife"], "isTool": true  }
+            "T": { "type": "item", "tags": ["tool-knife"], "isTool": true, "toolDurabilityCost": 16  }
         },
-        "width": 1,
+        "width": 2,
         "height": 1,
         "shapeless": true,
-        "output": { "type": "item", "code": "arrowsnslings:slingbullet-lead", "quantity": 16 }
+        "output": { "type": "item", "code": "arrowsnslings:slingbullet-unfired", "quantity": 16 }
     },
+    {
+        "ingredientPattern": "MT",
+        "recipeGroup": 1,
+        "ingredients": {
+            "M": { "type": "item", "code": "arrowsnslings:slingbullet-unfired", "quantity": 32},
+            "T": { "type": "item", "code": "game:charcoal", "quantity": 4}
+        },
+        "width": 2,
+        "height": 1,
+        "shapeless": true,
+        "output": { "type": "item", "code": "arrowsnslings:slingbullet-clay", "quantity": 32 }
+    }
 
 ]

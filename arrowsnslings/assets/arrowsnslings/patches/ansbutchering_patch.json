@@ -73,7 +73,7 @@
 		},
 		"width": 3,
 		"height": 3,
-		"output": { "type": "item", "code": "arrowsnslings:bow-cablebacked", "quantity": 1  },
+		"output": { "type": "item", "code": "arrowsnslings:bow-cablebacked", "quantity": 1  }
 		},
 		"dependsOn": [ { "modid": "butchering" } ]
 	}
