@@ -2,9 +2,9 @@
 	"code": "sling",
 	"class": "ItemAnSSling",
 	"tags": ["weapon", "weapon-ranged"],
+	"tool": "sling",
 	"maxstacksize": 1,
-    "tool": "sling",
-    "variantgroups": [
+  "variantgroups": [
     { "code": "type", "states": ["reed", "pelt", "flax", "leather", "jonasleather", "hardleather", "jonashardleather"] }
   ],
 	"durabilitybytype": {
@@ -67,7 +67,6 @@
       ]
     }
   },
-	"tool": "sling",
 	"creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"] },
 	"attributes": {
 		"aimAnimation": "slingaimbalearic",

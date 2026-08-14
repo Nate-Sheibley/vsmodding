@@ -10,6 +10,7 @@ public class arrowsnslingsMod : ModSystem
     {
         base.Start(api);
         api.RegisterItemClass("ItemAnSSling", typeof(ItemAnSSling));
+        api.RegisterItemClass("ItemAnSBullet", typeof(ItemAnSBullet));
         api.RegisterEntity("EntityThrownSlingBullet", typeof(EntityThrownSlingBullet));
         
     }
