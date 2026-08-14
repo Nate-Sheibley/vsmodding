@@ -47,8 +47,8 @@
 			"*": "bowaim"
 		},
 		"damageByType": {
-			"bow-cablebacked": 4,
-			"bow-composite": 5
+			"bow-cablebacked": 3.5,
+			"bow-composite": 4.5
 		},
 		"damageTierByType": {
 			"bow-cablebacked": 0,

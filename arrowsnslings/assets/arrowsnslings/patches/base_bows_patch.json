@@ -4,10 +4,10 @@
 	"op": "replace",
 	"path": "/attributes/damageByType",
 	"value": {
-			"bow-crude": 3,
-			"bow-simple": 3.25,
-			"bow-long": 3.5,
-			"bow-recurve": 4.5
+			"bow-crude": 2.0,
+			"bow-simple": 2.5,
+			"bow-long": 3,
+			"bow-recurve": 4
             }
     },
 	{
