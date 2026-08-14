@@ -4,7 +4,7 @@
 	"op": "replace",
 	"path": "/attributes/damageByType",
 	"value": {
-			"bow-crude": 2.0,
+			"bow-crude": 2.1,
 			"bow-simple": 2.5,
 			"bow-long": 3,
 			"bow-recurve": 4
