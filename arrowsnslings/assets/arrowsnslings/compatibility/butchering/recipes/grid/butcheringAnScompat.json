@@ -1,0 +1,68 @@
+[
+	{
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"recipeGroup":2,
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "butchering:ivory-raw" },
+			"M": { "type": "item", "code": "butchering:sinew-dry", "quantity": 3}
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"recipeGroup":2,
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "butchering:ivory-raw" },
+			"M": { "type": "item", "code": "game:bushmeat-raw","quantity":5 }
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "MFT,BLT,MFT",
+		"requiresTrait": "bowyer",
+		"recipeGroup":1,
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-recurve-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "game:{horn}" },
+			"M": { "type": "item", "code": "butchering:sinew-dry", "quantity": 3}
+		},
+		"allowedVariants": {
+			"horn": ["antler-*-05","antler-*-06","antler-*-07","antler-*-08","antler-*-09"]
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-composite", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "RFT,BLT,RFT",
+        "recipeGroup": 2,
+		"requiresTrait": "bowyer",
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-long-dry" },
+			"T": { "type": "item", "code": "butchering:sinew-dry", "quantity": 4},
+			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "game:{coating}" },
+            "R": { "type": "item", "code": "game:rope" }
+		},
+		"allowedVariants": {
+			"coating": ["fat-rendered", "resin", "beeswax"]
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-cablebacked", "quantity": 1  }
+		}
+]
