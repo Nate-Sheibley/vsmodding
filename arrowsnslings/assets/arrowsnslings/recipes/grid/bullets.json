@@ -2,6 +2,7 @@
     {
         "ingredientPattern": "MT",
         "recipeGroup": 1,
+        "requiresTrait": "improviser",
         "ingredients": {
             "M": { "type": "item", "code": "game:ingot-lead", "quantity": 1},
             "T": { "type": "item", "tags": ["tool-knife"], "isTool": true, "toolDurabilityCost":48 }
@@ -14,6 +15,7 @@
     {
         "ingredientPattern": "MT",
         "recipeGroup": 2,
+        "requiresTrait": "improviser",
         "ingredients": {
             "M": { "type": "item", "code": "game:clay-*", "quantity": 1},
             "T": { "type": "block", "code": "game:bowl-*-fired"}
@@ -26,6 +28,7 @@
     {
         "ingredientPattern": "MT",
         "recipeGroup": 1,
+        "requiresTrait": "improviser",
         "ingredients": {
             "M": { "type": "item", "code": "game:rawbrick-*", "quantity": 1},
             "T": { "type": "item", "tags": ["tool-knife"], "isTool": true, "toolDurabilityCost": 16  }
@@ -38,6 +41,7 @@
     {
         "ingredientPattern": "MT",
         "recipeGroup": 1,
+        "requiresTrait": "improviser",
         "ingredients": {
             "M": { "type": "item", "code": "arrowsnslings:slingbullet-unfired", "quantity": 32},
             "T": { "type": "item", "code": "game:charcoal", "quantity": 4}
