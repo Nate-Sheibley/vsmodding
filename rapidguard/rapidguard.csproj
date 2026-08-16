@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+
+    <!-- Read version from modinfo.json -->
+    <ModVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)/modinfo.json')), '&quot;version&quot;\s*:\s*&quot;([^&quot;]+)&quot;').Groups[1].Value)</ModVersion>
+    <OutputPath>/home/mox/Projects/vsmodding/rapidguard/compiled/rapidguard-$(ModVersion)/</OutputPath>
+
+    <AssemblyName>rapidguard</AssemblyName>
+    <RootNamespace>rapidguard</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+ <ItemGroup>
+
+     <!-- Core  -->
+    <Reference Include="Vintagestory">
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Vintagestory.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Core API -->
+    <Reference Include="VintagestoryAPI">
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Projectiles, combat, worldgen, etc. -->
+    <Reference Include="VSEssentials">
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Mods/VSEssentials.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <Reference Include="0Harmony">
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Lib/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Include="assets\**">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="modinfo.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

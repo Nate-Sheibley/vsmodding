@@ -1,7 +1,7 @@
 {
   "type": "code",
   "modid": "rapidguard",
-  "name": "Rapid Protection",
+  "name": "Worldgen Rapid Protection",
   "authors": ["Dyrosis"],
   "description": "Adds a cobble half slab into the source block of rapids at worldgen",
   "version": "0.1.0",
