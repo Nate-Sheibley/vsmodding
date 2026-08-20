@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
+using Vintagestory.API.MathTools;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 using Vintagestory.ServerMods;
@@ -11,8 +12,6 @@ namespace RapidGuard;
 
 public static class GenRivuletsPatch
 {
-    private static int slabBlockId;
-
     private static FieldInfo? gcfgField;
     private static FieldInfo? rapidWaterField;
 
@@ -95,14 +94,152 @@ public static class GenRivuletsPatch
         );
     }
 
+
+public static IEnumerable<CodeInstruction> Transpiler(
+        IEnumerable<CodeInstruction> instructions)
+    {
+        List<CodeInstruction> codes = new(instructions);
+
+        bool patched = false;
+
+        MethodInfo helper = AccessTools.Method(
+            typeof(GenRivuletsPatch),
+            nameof(GetTerrainBlockId)
+        )!;
+
+        for (int i = 0; i < codes.Count; i++)
+        {
+            CodeInstruction instruction = codes[i];
+
+            if (instruction.opcode != OpCodes.Callvirt &&
+                instruction.opcode != OpCodes.Call)
+            {
+                continue;
+            }
+
+            if (instruction.operand is not MethodInfo method)
+            {
+                continue;
+            }
+
+            // We specifically want:
+            //
+            // blockAccessor.SetBlock(int, BlockPos)
+            //
+            // NOT:
+            //
+            // blockAccessor.SetBlock(int, BlockPos, int)
+
+            ParameterInfo[] parameters = method.GetParameters();
+
+            if (method.Name != "SetBlock" ||
+                parameters.Length != 2 ||
+                parameters[0].ParameterType != typeof(int) ||
+                parameters[1].ParameterType != typeof(BlockPos))
+            {
+                continue;
+            }
+
+            // Expected IL:
+            //
+            // ld... blockAccessor
+            // ldc.i4.0
+            // ldloc... pos
+            // callvirt SetBlock
+            //
+            // We want:
+            //
+            // ld... blockAccessor
+            // ldarg.0
+            // ldarg.1
+            // ldarg.4
+            // ldloc... pos
+            // call GetTerrainBlockId
+            // callvirt SetBlock
+            //
+            // GetTerrainBlockId arguments:
+            //
+            // GenRivulets instance
+            // IServerChunk[] chunks
+            // int liquidBlockID
+            // BlockPos pos
+
+            if (i < 2 || !codes[i - 2].LoadsConstant(0))
+            {
+                continue;
+            }
+
+            // The instruction immediately before SetBlock is
+            // the existing pos local load. Preserve it exactly.
+            CodeInstruction posLoad = codes[i - 1];
+
+            // Replace ldc.i4.0 with ldarg.0.
+            //
+            // Preserve labels/exception blocks belonging to
+            // the original instruction.
+            CodeInstruction originalZero = codes[i - 2];
+
+            CodeInstruction instanceLoad =
+                CodeInstruction.LoadArgument(0);
+
+            instanceLoad.labels.AddRange(originalZero.labels);
+            instanceLoad.blocks.AddRange(originalZero.blocks);
+
+            codes[i - 2] = instanceLoad;
+
+            // Insert chunks argument.
+            codes.Insert(
+                i - 1,
+                CodeInstruction.LoadArgument(1)
+            );
+
+            // Insert liquidBlockID argument.
+            codes.Insert(
+                i,
+                CodeInstruction.LoadArgument(4)
+            );
+
+            // Insert pos argument.
+            //
+            // The original pos load is still present after the
+            // insertion above, but we explicitly duplicate it
+            // here so the helper receives its own BlockPos.
+            codes.Insert(
+                i + 1,
+                posLoad.Clone()
+            );
+
+            // Insert helper call.
+            codes.Insert(
+                i + 2,
+                new CodeInstruction(
+                    OpCodes.Call,
+                    helper
+                )
+            );
+
+            patched = true;
+            break;
+        }
+
+        if (!patched)
+        {
+            throw new InvalidOperationException(
+                "[RapidGuard] Could not find the terrain SetBlock(0, pos) instruction."
+            );
+        }
+
+        return codes;
+    }
+
     private static int GetSlabBlockId(IServerChunk[] chunks, BlockPos pos)
     {
         IMapChunk mapChunk = chunks[0].MapChunk;
 
         const int chunkSize = 32;
 
-        int localX = pos.X % chunkSize;
-        int localZ = pos.Z % chunkSize;
+        int localX = pos.X & 31;
+        int localZ = pos.Z & 31;
 
         int rockBlockId = mapChunk.TopRockIdMap[
             localZ * chunkSize + localX
@@ -158,109 +295,6 @@ public static class GenRivuletsPatch
         return slabBlock.Id;
     }
 
-    public static IEnumerable<CodeInstruction> Transpiler(
-        IEnumerable<CodeInstruction> instructions)
-    {
-        List<CodeInstruction> codes = new(instructions);
-
-        bool patched = false;
-
-        for (int i = 0; i < codes.Count; i++)
-        {
-            CodeInstruction instruction = codes[i];
-
-            if (instruction.opcode != OpCodes.Callvirt &&
-                instruction.opcode != OpCodes.Call)
-            {
-                continue;
-            }
-
-            if (instruction.operand is not MethodInfo method)
-            {
-                continue;
-            }
-
-            // We specifically want:
-            //
-            // blockAccessor.SetBlock(int, BlockPos)
-            //
-            // NOT:
-            //
-            // blockAccessor.SetBlock(int, BlockPos, int)
-            //
-            ParameterInfo[] parameters = method.GetParameters();
-
-            if (method.Name != "SetBlock" ||
-                parameters.Length != 2 ||
-                parameters[0].ParameterType != typeof(int) ||
-                parameters[1].ParameterType != typeof(BlockPos))
-            {
-                continue;
-            }
-
-            // Expected IL around the call:
-            //
-            // ld... blockAccessor
-            // ldc.i4.0
-            // ldloc... pos
-            // callvirt IBlockAccessor.SetBlock
-            //
-            // We replace ldc.i4.0 with:
-            //
-            // ldarg.0              // GenRivulets instance
-            // ldarg.3              // liquidBlockID
-            // call GetTerrainBlockId
-            //
-            // NOTE: instance = argument 0
-            //       chunks   = argument 1
-            //       chunkX   = argument 2
-            //       chunkZ   = argument 3
-            //       liquid   = argument 4
-
-            if (i < 2 || !codes[i - 2].LoadsConstant(0))
-            {
-                continue;
-            }
-
-            MethodInfo helper = AccessTools.Method(
-                typeof(GenRivuletsPatch),
-                nameof(GetTerrainBlockId)
-            )!;
-
-            // Preserve labels/blocks from the original ldc.i4.0.
-            CodeInstruction originalZero = codes[i - 2];
-
-            codes[i - 2] = CodeInstruction.LoadArgument(0);
-            codes[i - 2].labels.AddRange(originalZero.labels);
-            codes[i - 2].blocks.AddRange(originalZero.blocks);
-
-            codes.Insert(
-                i - 1,
-                CodeInstruction.LoadArgument(4)
-            );
-
-            codes.Insert(
-                i,
-                new CodeInstruction(
-                    OpCodes.Call,
-                    helper
-                )
-            );
-
-            patched = true;
-            break;
-        }
-
-        if (!patched)
-        {
-            throw new InvalidOperationException(
-                "[RapidGuard] Could not find the terrain SetBlock(0, pos) instruction."
-            );
-        }
-
-        return codes;
-    }
-
     private static int GetTerrainBlockId(
     GenRivulets instance,
     IServerChunk[] chunks,
@@ -290,3 +324,4 @@ public static class GenRivuletsPatch
 
         return GetSlabBlockId(chunks, pos);
     }
+}

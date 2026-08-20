@@ -16,24 +16,30 @@
 
      <!-- Core  -->
     <Reference Include="Vintagestory">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Vintagestory.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/Vintagestory.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Core API -->
     <Reference Include="VintagestoryAPI">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/VintagestoryAPI.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Server -->
+    <Reference Include="VintagestoryServer">
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/VintagestoryServer.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Projectiles, combat, worldgen, etc. -->
     <Reference Include="VSEssentials">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Mods/VSEssentials.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/Mods/VSEssentials.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <Reference Include="0Harmony">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Lib/0Harmony.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/Lib/0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
 

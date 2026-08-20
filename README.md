@@ -3,9 +3,7 @@ A couple vintage story mods
 
 # TODO
 ## Slings and arrows
- - Add add ivory bow varient, and change hunter/bow progression accordingly 
- - adjust elk models of cable backed bow properly
- - Add (malefactor only) craftable lead and clay sling projectiles (use/modify bullet item?)
+ - add kiln recipe and related models for clay bullets
 ## Spears and Javlins
 Have not started
  - remove or severely reduce spear throw distance
@@ -14,7 +12,6 @@ Have not started
  - add atlatl for javlins
     -atlatl is craftable by all. MUST be worse than arrowsnslings buffed varients in some way.
 ## Rapids protection
-Have not started
  - edit worldgen to spawn rapids with a cobble slab in their source 
     - so they do not break with soil instability
  - make the cobble the same type as the tope layer of rock

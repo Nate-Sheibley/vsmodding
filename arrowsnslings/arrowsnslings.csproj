@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <OutputPath>/home/mox/Projects/vsmodding/arrowsnslings/compiled</OutputPath>
+
+    <!-- Read version from modinfo.json -->
+    <ModVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)/modinfo.json')), '&quot;version&quot;\s*:\s*&quot;([^&quot;]+)&quot;').Groups[1].Value)</ModVersion>
+    <OutputPath>/home/mox/Projects/vsmodding/arrowsnslings/arrowsnslings-$(ModVersion)</OutputPath>
+
     <AssemblyName>arrowsnslings</AssemblyName>
     <RootNamespace>arrowsnslings</RootNamespace>
     <Nullable>enable</Nullable>
