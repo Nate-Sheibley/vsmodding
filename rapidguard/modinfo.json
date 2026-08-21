@@ -4,7 +4,7 @@
   "name": "Worldgen Rapid Protection",
   "authors": ["Dyrosis"],
   "description": "Adds a cobble half slab into the source block of rapids at worldgen",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "Side": "Server",
   "RequiredOnServer": true
 
