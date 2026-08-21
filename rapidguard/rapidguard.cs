@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Linq;
 using HarmonyLib;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Common;
@@ -14,6 +15,7 @@ public static class GenRivuletsPatch
 {
     private static FieldInfo? gcfgField;
     private static FieldInfo? rapidWaterField;
+    private static FieldInfo? blockAccessorField;
 
     private static readonly Dictionary<int, int> slabBlockIds = new();
 
@@ -40,6 +42,20 @@ public static class GenRivuletsPatch
             gcfgField.FieldType,
             "rivuletRapidWaterBlockId"
         );
+        
+        blockAccessorField = AccessTools.Field(
+            typeof(GenRivulets),
+            "blockAccessor"
+        );
+
+        if (blockAccessorField == null)
+        {
+            api.Logger.Error(
+                "[RapidGuard] Could not find GenRivulets.blockAccessor."
+            );
+            return;
+        }
+
 
         if (rapidWaterField == null)
         {
@@ -94,25 +110,24 @@ public static class GenRivuletsPatch
         );
     }
 
-
-public static IEnumerable<CodeInstruction> Transpiler(
+    public static IEnumerable<CodeInstruction> Transpiler(
         IEnumerable<CodeInstruction> instructions)
     {
         List<CodeInstruction> codes = new(instructions);
 
-        bool patched = false;
-
         MethodInfo helper = AccessTools.Method(
             typeof(GenRivuletsPatch),
-            nameof(GetTerrainBlockId)
+            nameof(PlaceRapidSourceSlab)
         )!;
+
+        bool patched = false;
 
         for (int i = 0; i < codes.Count; i++)
         {
             CodeInstruction instruction = codes[i];
 
-            if (instruction.opcode != OpCodes.Callvirt &&
-                instruction.opcode != OpCodes.Call)
+            if (instruction.opcode != OpCodes.Call &&
+                instruction.opcode != OpCodes.Callvirt)
             {
                 continue;
             }
@@ -122,96 +137,99 @@ public static IEnumerable<CodeInstruction> Transpiler(
                 continue;
             }
 
-            // We specifically want:
-            //
-            // blockAccessor.SetBlock(int, BlockPos)
-            //
-            // NOT:
-            //
-            // blockAccessor.SetBlock(int, BlockPos, int)
+            if (method.Name != "ScheduleBlockUpdate")
+            {
+                continue;
+            }
 
             ParameterInfo[] parameters = method.GetParameters();
 
-            if (method.Name != "SetBlock" ||
-                parameters.Length != 2 ||
-                parameters[0].ParameterType != typeof(int) ||
-                parameters[1].ParameterType != typeof(BlockPos))
+            if (parameters.Length != 1 ||
+                parameters[0].ParameterType != typeof(BlockPos))
             {
                 continue;
             }
 
-            // Expected IL:
-            //
-            // ld... blockAccessor
-            // ldc.i4.0
-            // ldloc... pos
-            // callvirt SetBlock
-            //
-            // We want:
-            //
-            // ld... blockAccessor
-            // ldarg.0
-            // ldarg.1
-            // ldarg.4
-            // ldloc... pos
-            // call GetTerrainBlockId
-            // callvirt SetBlock
-            //
-            // GetTerrainBlockId arguments:
-            //
-            // GenRivulets instance
-            // IServerChunk[] chunks
-            // int liquidBlockID
-            // BlockPos pos
+            /*
+            * We found:
+            *
+            *     blockAccessor.ScheduleBlockUpdate(pos);
+            *
+            * This is inside the m == 0 branch.
+            *
+            * IMPORTANT:
+            *
+            * We inject AFTER this call so the evaluation stack
+            * is empty.
+            */
 
-            if (i < 2 || !codes[i - 2].LoadsConstant(0))
+            if (i < 1)
             {
                 continue;
             }
 
-            // The instruction immediately before SetBlock is
-            // the existing pos local load. Preserve it exactly.
-            CodeInstruction posLoad = codes[i - 1];
+            /*
+            * The instruction immediately before ScheduleBlockUpdate
+            * loads the BlockPos argument.
+            *
+            * We need another copy of that local load for our helper.
+            *
+            * Do NOT use Clone(), because Clone() can copy labels and
+            * exception blocks.
+            */
+            CodeInstruction originalPosLoad = codes[i - 1];
 
-            // Replace ldc.i4.0 with ldarg.0.
-            //
-            // Preserve labels/exception blocks belonging to
-            // the original instruction.
-            CodeInstruction originalZero = codes[i - 2];
+            CodeInstruction posLoad = new CodeInstruction(
+                originalPosLoad.opcode,
+                originalPosLoad.operand
+            );
 
-            CodeInstruction instanceLoad =
-                CodeInstruction.LoadArgument(0);
+            /*
+            * Insert AFTER ScheduleBlockUpdate.
+            *
+            * The original call has consumed:
+            *
+            *     blockAccessor
+            *     pos
+            *
+            * so the evaluation stack is empty here.
+            *
+            * We now push:
+            *
+            *     this
+            *     chunks
+            *     liquidBlockID
+            *     pos
+            *
+            * and call:
+            *
+            *     PlaceRapidSourceSlab(...)
+            */
 
-            instanceLoad.labels.AddRange(originalZero.labels);
-            instanceLoad.blocks.AddRange(originalZero.blocks);
+            int insertIndex = i + 1;
 
-            codes[i - 2] = instanceLoad;
-
-            // Insert chunks argument.
             codes.Insert(
-                i - 1,
+                insertIndex++,
+                CodeInstruction.LoadArgument(0)
+            );
+
+            codes.Insert(
+                insertIndex++,
                 CodeInstruction.LoadArgument(1)
             );
 
-            // Insert liquidBlockID argument.
             codes.Insert(
-                i,
+                insertIndex++,
                 CodeInstruction.LoadArgument(4)
             );
 
-            // Insert pos argument.
-            //
-            // The original pos load is still present after the
-            // insertion above, but we explicitly duplicate it
-            // here so the helper receives its own BlockPos.
             codes.Insert(
-                i + 1,
-                posLoad.Clone()
+                insertIndex++,
+                posLoad
             );
 
-            // Insert helper call.
             codes.Insert(
-                i + 2,
+                insertIndex,
                 new CodeInstruction(
                     OpCodes.Call,
                     helper
@@ -225,12 +243,13 @@ public static IEnumerable<CodeInstruction> Transpiler(
         if (!patched)
         {
             throw new InvalidOperationException(
-                "[RapidGuard] Could not find the terrain SetBlock(0, pos) instruction."
+                "[RapidGuard] Could not find ScheduleBlockUpdate(BlockPos)."
             );
         }
 
         return codes;
     }
+
 
     private static int GetSlabBlockId(IServerChunk[] chunks, BlockPos pos)
     {
@@ -263,7 +282,7 @@ public static IEnumerable<CodeInstruction> Transpiler(
             return 0;
         }
 
-        string rockType = rockBlock.Code.LastCodePart();
+        string rockType = rockBlock.Code.Path.Split('-').Last();
 
         AssetLocation slabCode = new AssetLocation(
             "game",
@@ -295,33 +314,53 @@ public static IEnumerable<CodeInstruction> Transpiler(
         return slabBlock.Id;
     }
 
-    private static int GetTerrainBlockId(
-    GenRivulets instance,
-    IServerChunk[] chunks,
-    int liquidBlockID,
-    BlockPos pos
-    )
+    private static void PlaceRapidSourceSlab(
+        GenRivulets instance,
+        IServerChunk[] chunks,
+        int liquidBlockID,
+        BlockPos pos)
     {
-        if (gcfgField == null || rapidWaterField == null)
+        if (gcfgField == null ||
+            rapidWaterField == null ||
+            blockAccessorField == null)
         {
-            return 0;
+            return;
         }
 
         object? gcfg = gcfgField.GetValue(instance);
 
         if (gcfg == null)
         {
-            return 0;
+            return;
         }
 
         int rapidWaterBlockId =
             (int)rapidWaterField.GetValue(gcfg)!;
 
+        // Only rapid water gets the slab.
         if (liquidBlockID != rapidWaterBlockId)
         {
-            return 0;
+            return;
         }
 
-        return GetSlabBlockId(chunks, pos);
+        int slabId = GetSlabBlockId(chunks, pos);
+
+        if (slabId <= 0)
+        {
+            return;
+        }
+
+        IWorldGenBlockAccessor? blockAccessor =
+            blockAccessorField.GetValue(instance)
+            as IWorldGenBlockAccessor;
+
+        if (blockAccessor == null)
+        {
+            return;
+        }
+
+        blockAccessor.SetBlock(slabId, pos);
     }
+
+
 }
