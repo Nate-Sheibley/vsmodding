@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 
     <!-- Read version from modinfo.json -->
     <ModVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)/modinfo.json')), '&quot;version&quot;\s*:\s*&quot;([^&quot;]+)&quot;').Groups[1].Value)</ModVersion>
-    <OutputPath>/home/mox/Projects/vsmodding/arrowsnslings/arrowsnslings-$(ModVersion)</OutputPath>
+    <OutputPath>/home/mox/Projects/VSmods/vsmodding/arrowsnslings/arrowsnslings-$(ModVersion)</OutputPath>
 
     <AssemblyName>arrowsnslings</AssemblyName>
     <RootNamespace>arrowsnslings</RootNamespace>
@@ -16,25 +17,25 @@
 
      <!-- Core  -->
     <Reference Include="Vintagestory">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Vintagestory.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/Vintagestory.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Core API -->
     <Reference Include="VintagestoryAPI">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/VintagestoryAPI.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Game systems (ItemStone, etc.) -->
     <Reference Include="VSSurvivalMod">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Mods/VSSurvivalMod.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/Mods/VSSurvivalMod.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
     <!-- Projectiles, combat, etc. -->
     <Reference Include="VSEssentials">
-      <HintPath>/home/mox/.local/share/MVL/Release/1.22.6/Mods/VSEssentials.dll</HintPath>
+      <HintPath>/home/mox/.local/share/MVL/Release/1.22.5/Mods/VSEssentials.dll</HintPath>
       <Private>false</Private>
     </Reference>
 

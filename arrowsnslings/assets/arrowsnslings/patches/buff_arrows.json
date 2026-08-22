@@ -64,19 +64,19 @@
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/damageByType/*-iron", 
-	"value": 4
+	"value": 3.5
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/damageByType/*-meteoriciron", 
-	"value": 4.5
+	"value": 4
   },
   { 
 	"file": "game:itemtypes/tool/arrow.json",
 	"op": "replace",
 	"path": "/attributes/damageByType/*-steel", 
-	"value": 5
+	"value": 4.5
   },
 //   break chance on impact
   { 
