@@ -3,18 +3,20 @@ A couple vintage story mods
 
 # TODO
 ## Slings and arrows
- - add kiln recipe and related models for clay bullets
+ - Feature complete.
+ - Taking compatability requests
 ## Spears and Javlins
-Have not started
- - remove or severely reduce spear throw distance
- - buff spear durability
- - add javlins that can be thrown and stack
- - add atlatl for javlins
+Started!
+ - Architecture target: vanilla spear to javlin. New Pike item. New atlatl item
+ - add pike item to fill the role the spear has in melee (but better) BUT has a movement nerf. (good for bear traps)
+ - change spear so that it is worse in melee and stack (4)
+ - add atlatl that can throw items with the weapon-spear tag
     -atlatl is craftable by all. MUST be worse than arrowsnslings buffed varients in some way.
+ - adjust models to match these design goals
+ - add walking stick like animations for pikes
+ - Note: SnJ:pike = spear in lang files, and game:spear = Javlin
 ## Rapids protection
- - edit worldgen to spawn rapids with a cobble slab in their source 
-    - so they do not break with soil instability
- - make the cobble the same type as the tope layer of rock
+ - Done!
 ## Standalone Braizers
 Have not started
  - Make a braizer that consumes fuel at ~1/4 normal fuel use
