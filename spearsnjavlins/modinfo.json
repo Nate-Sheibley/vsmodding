@@ -1,0 +1,12 @@
+{
+  "type": "code",
+  "modid": "spearsnjavlins",
+  "name": "Spears and Javlins",
+  "authors": ["Dyrosis"],
+  "description": "Adds atlatl and long spears, severely nerfs vanilla spear as melee",
+  "version": "1.0.0",
+  "Side": "Universal",
+  "RequiredOnClient": true,
+  "RequiredOnServer": true
+
+}

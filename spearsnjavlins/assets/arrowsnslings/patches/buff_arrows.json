@@ -1,0 +1,163 @@
+[
+    // damage by type
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-crude", 
+	"value": 0
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-flint", 
+	"value": 0.5
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-obsidian", 
+	"value": 1
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-copper",
+	"value": 1
+  },
+  {
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-bone",
+	"value": 1.5
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-tinbronze", 
+	"value": 2
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-bismuthbronze", 
+	"value": 2
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-gold", 
+	"value": 2
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-silver", 
+	"value": 2
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-blackbronze", 
+	"value": 2.5
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-iron", 
+	"value": 3.5
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-meteoriciron", 
+	"value": 4
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/damageByType/*-steel", 
+	"value": 4.5
+  },
+//   break chance on impact
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-crude", 
+	"value": 0.25
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-flint", 
+	"value": 0.25
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-obsidian", 
+	"value": 0.25
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-copper", 
+	"value": 0.2
+  },
+  {
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-bone",
+	"value": 0.25
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-tinbronze", 
+	"value": 0.15
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-bismuthbronze", 
+	"value": 0.15
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-blackbronze", 
+	"value": 0.1
+  },  
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-gold", 
+	"value": 0.2
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-silver", 
+	"value": 0.2
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-iron", 
+	"value": 0.1
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-meteoriciron", 
+	"value": 0.05
+  },
+  { 
+	"file": "game:itemtypes/tool/arrow.json",
+	"op": "replace",
+	"path": "/attributes/breakChanceOnImpactByType/*-steel", 
+	"value": 0.05
+  }
+]
+
+
+

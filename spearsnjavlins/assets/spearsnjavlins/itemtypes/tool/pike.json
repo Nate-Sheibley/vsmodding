@@ -1,0 +1,338 @@
+{
+  "code": "pike",
+  "tags": [
+    "weapon",
+    "weapon-melee"
+  ],
+  "damagedby": [
+    "attacking"
+  ],
+  "maxstacksize": 1,
+  "tool": "pike",
+  "behaviors": [
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "WallHalves",
+        "wallOffYByType": {
+          "*": 3
+        },
+        "ctrlKey": true,
+        "selectionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.1,
+          "z2": 1
+        },
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 0,
+          "y2": 0,
+          "z2": 0
+        }
+      }
+    },
+    {
+      "name": "Buffable"
+    },
+    {
+      "name": "AnimationAuthoritative"
+    }
+  ],
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [
+        "generic"
+      ]
+    },
+    {
+      "code": "material",
+      "states": [
+        "chert",
+        "granite",
+        "andesite",
+        "basalt",
+        "obsidian",
+        "peridotite",
+        "flint",
+        "copper",
+        "tinbronze",
+        "bismuthbronze",
+        "blackbronze",
+        "ornategold",
+        "ornatesilver",
+        "iron",
+        "meteoriciron",
+        "steel"
+      ]
+    }
+  ],
+  "shapeByType": {
+    "pike-generic-ornategold": {
+      "base": "item/tool/spear/ornategold"
+    },
+    "pike-generic-ornatesilver": {
+      "base": "item/tool/spear/ornatesilver"
+    },
+    "@pike-generic-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
+      "base": "item/tool/spear/stone"
+    },
+    "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
+      "base": "item/tool/spear/metal-{material}"
+    }
+  },
+  "texturesByType": {
+    "pike-generic-flint": {
+      "stone": {
+        "base": "block/stone/{material}"
+      }
+    },
+    "@pike-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+      "stone": {
+        "base": "block/stone/rock/{material}1"
+      }
+    },
+    "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
+      "ingot": {
+        "base": "block/metal/ingot/{material}"
+      }
+    }
+  },
+  "attackRangebytype": {
+		"*": 3.5
+	},
+  // Melee damage
+  "attackpowerbytype": {
+    "pike-generic-chert": 2,
+    "pike-generic-granite": 2,
+    "pike-generic-andesite": 2,
+    "pike-generic-peridotite": 2,
+    "pike-generic-basalt": 2,
+    "pike-generic-flint": 2.25,
+    "pike-generic-obsidian": 2.5,
+    "pike-generic-copper": 3,
+    "pike-generic-bismuthbronze": 3.5,
+    "pike-generic-tinbronze": 3.5,
+    "pike-generic-blackbronze": 3.75,
+    "pike-generic-ornategold": 4,
+    "pike-generic-ornatesilver": 4,
+    "pike-generic-iron": 4,
+    "pike-generic-meteoriciron": 4.25,
+    "pike-generic-steel": 4.5
+  },
+  "damageTierByType": {
+    "*-chert": 0,
+    "*-granite": 0,
+    "*-andesite": 0,
+    "*-peridotite": 0,
+    "*-basalt": 0,
+    "*-flint": 0,
+    "*-obsidian": 1,
+    "*-copper": 1,
+    "*-bismuthbronze": 2,
+    "*-tinbronze": 2,
+    "*-blackbronze": 2,
+    "*-ornategold": 4,
+    "*-ornatesilver": 4,
+    "*-iron": 3,
+    "*-meteoriciron": 3,
+    "*-steel": 4
+  },
+  "durabilitybytype": {
+    "pike-generic-chert": 120,
+    "pike-generic-granite": 120,
+    "pike-generic-andesite": 120,
+    "pike-generic-basalt": 120,
+    "pike-generic-peridotite": 120,
+    "pike-generic-obsidian": 180,
+    "pike-generic-flint": 150,
+    "pike-generic-copper": 220,
+    "pike-generic-tinbronze": 300,
+    "pike-generic-bismuthbronze": 325,
+    "pike-generic-blackbronze": 350,
+    "pike-generic-ornategold": 350,
+    "pike-generic-ornatesilver": 350,
+    "pike-generic-iron": 400,
+    "pike-generic-meteoriciron": 450,
+    "pike-generic-steel": 500
+  },
+  "heldTpIdleAnimation": "spearidle",
+  "heldTpHitAnimation": "spearhit",
+  "handbook": {
+    "groupBy": [
+      "pike-*"
+    ]
+  },
+  "creativeinventory": {
+    "general": [
+      "*"
+    ],
+    "items": [
+      "*"
+    ],
+    "tools": [
+      "*"
+    ]
+  },
+  "toolrackTransformByType": {
+    "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|ornategold|ornatesilver|iron|meteoriciron|steel)": {
+      "rotation": {
+        "x": 90,
+        "y": 1,
+        "z": -1
+      },
+      "translation": {
+        "x": 0.31,
+        "y": 0.04,
+        "z": 0.7
+      },
+      "scale": 1.36
+    },
+    "*": {
+      "rotation": {
+        "y": 1,
+        "z": -1
+      },
+      "translation": {
+        "x": -0.23,
+        "y": 0.66
+      },
+      "scale": 1.36
+    }
+  },
+  "guiTransformByType": {
+    "pike-generic-ornategold": {
+      "rotation": {
+        "x": -16,
+        "y": -2,
+        "z": -134
+      },
+      "origin": {
+        "x": 1.47,
+        "y": 0.05,
+        "z": 0.5
+      },
+      "scale": 3.09
+    },
+    "pike-generic-ornatesilver": {
+      "rotation": {
+        "x": -16,
+        "y": -2,
+        "z": -134
+      },
+      "origin": {
+        "x": 1.47,
+        "y": 0.05,
+        "z": 0.5
+      },
+      "scale": 3.09
+    },
+    "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
+      "rotation": {
+        "x": 33,
+        "y": 0,
+        "z": -127
+      },
+      "origin": {
+        "x": 1.39,
+        "y": 0.05,
+        "z": 0.52
+      },
+      "scale": 2.26
+    },
+    "*": {
+      "rotation": {
+        "x": -39,
+        "y": -29,
+        "z": -134
+      },
+      "origin": {
+        "x": 1.4,
+        "y": 0.05,
+        "z": 0.5
+      },
+      "scale": 3.09
+    }
+  },
+  "groundTransformByType": {
+    "*": {
+      "translation": {
+        "x": 0,
+        "y": 0.05,
+        "z": 0
+      },
+      "rotation": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 3.4
+    }
+  },
+  "tpHandTransformByType": {
+    "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
+      "translation": {
+        "x": -1.29,
+        "y": 0.03,
+        "z": -0.57
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.6,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.8
+    },
+    "@pike-generic-(ornategold|ornatesilver)": {
+      "translation": {
+        "x": -1.04,
+        "y": 0.02,
+        "z": -0.57
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.8
+    },
+    "*": {
+      "translation": {
+        "x": -1.29,
+        "y": 0.02,
+        "z": -0.57
+      },
+      "rotation": {
+        "x": -90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.8
+    }
+  }
+}
