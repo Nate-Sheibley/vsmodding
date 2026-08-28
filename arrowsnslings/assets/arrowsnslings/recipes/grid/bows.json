@@ -2,11 +2,29 @@
     {
 		"ingredientPattern": "RFT,BLT,RFT",
 		"requiresTrait": "bowyer",
-		"recipeGroup": 1,
+		"recipeGroup": 2,
 		"ingredients": {
 			"B": { "type": "item", "code": "game:bowstave-long-dry" },
 			"T": { "type": "item", "code": "game:flaxtwine" },
 			"L": { "type": "item", "code": "game:leather-normal-plain" },
+			"F": { "type": "item", "code": "game:{coating}" },
+            "R": { "type": "item", "code": "game:rope" }
+		},
+		"allowedVariants": {
+			"coating": ["fat-rendered", "resin", "beeswax"]
+		},
+		"width": 3,
+		"height": 3,
+		"output": { "type": "item", "code": "arrowsnslings:bow-cablebacked", "quantity": 1  }
+	},
+	{
+		"ingredientPattern": "RFT,BLT,RFT",
+		"requiresTrait": "bowyer",
+		"recipeGroup": 1,
+		"ingredients": {
+			"B": { "type": "item", "code": "game:bowstave-long-dry" },
+			"T": { "type": "item", "code": "game:flaxtwine" },
+			"L": { "type": "item", "code": "hide-pelt-*", "tags": { "anyOf":["size-small", "size-medium"]}},
 			"F": { "type": "item", "code": "game:{coating}" },
             "R": { "type": "item", "code": "game:rope" }
 		},

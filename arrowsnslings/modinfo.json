@@ -4,7 +4,7 @@
   "name": "Arrows and Slings",
   "authors": ["Dyrosis"],
   "description": "Adds progressive sling types, rebalances arrows and bows, and adds 2 hunter craftable bows",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "Side": "Universal",
   "RequiredOnClient": true,
   "RequiredOnServer": true
