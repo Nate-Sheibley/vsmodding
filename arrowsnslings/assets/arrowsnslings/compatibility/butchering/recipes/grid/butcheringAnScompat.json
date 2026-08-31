@@ -72,7 +72,7 @@
 		"ingredients": {
 			"B": { "type": "item", "code": "game:bowstave-long-dry" },
 			"T": { "type": "item", "code": "butchering:sinew-dry", "quantity": 4},
-			"L": { "type": "item", "code": "hide-pelt-*", "tags": { "anyOf":["size-small", "size-medium"]}},
+			"L": { "type": "item", "code": "game:hide-pelt-*", "tags": { "anyOf":["size-small", "size-medium"]}},
 			"F": { "type": "item", "code": "game:{coating}" },
             "R": { "type": "item", "code": "game:rope" }
 		},
