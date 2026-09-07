@@ -11,6 +11,17 @@
             }
     },
 	{
+		"file": "game:itemtypes/tool/bow.json",
+        "op": "replace",
+        "path": "/attributes/damageTierByType",
+        "value": {
+			"bow-crude": 0,
+			"bow-simple": 1,
+			"bow-long": 2,
+			"bow-recurve": 3
+		}
+	},
+	{
 		"file": "game:recipes/grid/tool/bow.json",
 		"op": "remove",
 		"path": "/4/requiresTrait"

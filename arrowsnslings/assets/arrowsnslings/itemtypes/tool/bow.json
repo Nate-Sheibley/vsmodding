@@ -51,8 +51,8 @@
 			"bow-composite": 4.5
 		},
 		"damageTierByType": {
-			"bow-cablebacked": 0,
-			"bow-composite": 0
+			"bow-cablebacked": 2,
+			"bow-composite": 3
 		},
 		"statModifierByType": {
 			"bow-cablebacked": { "rangedWeaponsAcc": 0.2 },
