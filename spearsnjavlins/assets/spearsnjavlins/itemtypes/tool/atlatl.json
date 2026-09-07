@@ -1,0 +1,63 @@
+
+{
+	"code": "atlatl",
+	"tags": ["weapon", "weapon-ranged", "weapon-bow"],
+	"variantgroups": [
+		{ "code": "type", "states": ["crude", "simple", "advanced" ] }
+	],
+	"class": "ItemSnJAtlatl",
+	"maxstacksize": 1,
+	"durabilityByType": {
+		"atlatl-crude": 40,
+		"atlatl-simple": 120,
+		"atlatl-advanced": 180,
+	},
+	"shape": {
+		"base": "game:item/stick",
+		"alternates": [
+			{ "base": "game:item/tool/atlatl/{type}-charge1" },
+			{ "base": "game:item/tool/atlatl/{type}-charge2" },
+			{ "base": "game:item/tool/atlatl/{type}-charge3" }
+		]
+	},
+	"tool": "atlatl",
+	"creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	"attributes": {
+		"heldItemPitchFollow": 1,
+		"aimAnimationByType": {
+			"*": "atlalaim",
+		},
+		"damageByType": {
+			"atlatl-crude": 2,
+			"atlatl-simple": 3,
+			"atlatl-advanced": 4,
+		},
+		"damageTierByType": {
+			"atlatl-crude": 0,
+			"atlatl-simple": 0,
+			"atlatl-advanced": 0
+		},
+		"statModifierByType": {
+			"atlatl-crude": { "rangedWeaponsAcc": -0.1 },
+			"atlatl-simple": { "rangedWeaponsAcc": 0 },
+			"atlatl-advanced": { "rangedWeaponsAcc": 0.1 }
+		},
+		"behaviors": [
+			{
+				"name": "GroundStorable",
+				"properties": {
+					"layout": "WallHalves",
+					"wallOffYByType": {
+						"atlatl-crude": 1,
+						"atlatl-simple": 1,
+						"*": 2,
+					},
+					"ctrlKey": true,
+					"selectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.1, "z2": 1 },
+					"collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 0, "y2": 0, "z2": 0 }
+				}
+			}
+		],
+    }
+}
+				

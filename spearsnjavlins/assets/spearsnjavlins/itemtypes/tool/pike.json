@@ -1,5 +1,6 @@
 {
   "code": "pike",
+  "class": "ItemAnJSpear",
   "tags": [
     "weapon",
     "weapon-melee"
@@ -41,6 +42,12 @@
     },
     {
       "name": "AnimationAuthoritative"
+    },
+    {
+      "name": "CollectibleBehaviorHeldMovementSpeed",
+      "properties": {
+        "multiplier": 0.85
+      }
     }
   ],
   "variantgroups": [
@@ -74,27 +81,27 @@
   ],
   "shapeByType": {
     "pike-generic-ornategold": {
-      "base": "item/tool/spear/ornategold"
+      "base": "game:item/tool/spear/ornategold"
     },
     "pike-generic-ornatesilver": {
-      "base": "item/tool/spear/ornatesilver"
+      "base": "game:item/tool/spear/ornatesilver"
     },
     "@pike-generic-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
-      "base": "item/tool/spear/stone"
+      "base": "game:item/tool/spear/stone"
     },
     "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
-      "base": "item/tool/spear/metal-{material}"
+      "base": "game:item/tool/spear/metal-{material}"
     }
   },
   "texturesByType": {
     "pike-generic-flint": {
       "stone": {
-        "base": "block/stone/{material}"
+        "base": "game:block/stone/{material}"
       }
     },
     "@pike-generic-(chert|granite|andesite|basalt|obsidian|peridotite)": {
       "stone": {
-        "base": "block/stone/rock/{material}1"
+        "base": "game:block/stone/rock/{material}1"
       }
     },
     "@pike-generic-(copper|tinbronze|bismuthbronze|blackbronze|iron|meteoriciron|steel)": {
@@ -103,9 +110,7 @@
       }
     }
   },
-  "attackRangebytype": {
-		"*": 3.5
-	},
+  "attackRange": 4.5,
   // Melee damage
   "attackpowerbytype": {
     "pike-generic-chert": 2,

@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+    <!-- Read version from modinfo.json -->
+    <ModVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)/modinfo.json')), '&quot;version&quot;\s*:\s*&quot;([^&quot;]+)&quot;').Groups[1].Value)</ModVersion>
+    <OutputPath>/home/mox/Projects/VSmods/vsmodding/spearsnjavlins/spearsnjavlins-$(ModVersion)</OutputPath>
+
+    <AssemblyName>spearsnjavlins</AssemblyName>
+    <RootNamespace>spearsnjavlins</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+ <ItemGroup>
+
+     <!-- Core  -->
+    <Reference Include="Vintagestory">
+      <HintPath>/home/mox/.config/RiftLauncherGameVersions/1.22.7/Vintagestory.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Core API -->
+    <Reference Include="VintagestoryAPI">
+      <HintPath>/home/mox/.config/RiftLauncherGameVersions/1.22.7/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Game systems (ItemStone, etc.) -->
+    <Reference Include="VSSurvivalMod">
+      <HintPath>/home/mox/.config/RiftLauncherGameVersions/1.22.7/Mods/VSSurvivalMod.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Projectiles, combat, etc. -->
+    <Reference Include="VSEssentials">
+      <HintPath>/home/mox/.config/RiftLauncherGameVersions/1.22.7/Mods/VSEssentials.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Include="assets\**">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="modinfo.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
